@@ -1,0 +1,83 @@
+# ════════════════════════════════════════════════
+#  CREA · creatucontenido.com.ar · .htaccess
+#  Hostinger / Apache
+# ════════════════════════════════════════════════
+
+Options -Indexes
+ServerSignature Off
+
+# ─── HTTPS redirect ───────────────────────────
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ─── www → no-www (o viceversa, elegí uno) ────
+# Usamos SIN www (creatucontenido.com.ar)
+RewriteCond %{HTTP_HOST} ^www\.creatucontenido\.com\.ar$ [NC]
+RewriteRule ^ https://creatucontenido.com.ar%{REQUEST_URI} [R=301,L]
+
+# ─── URLs limpias para artículos ──────────────
+# /recursos  →  /Recursos.html
+RewriteRule ^recursos/?$  /Recursos.html  [R=301,L]
+
+# /recursos/slug  →  /recurso-slug.html
+RewriteRule ^recursos/([a-z0-9\-]+)/?$  /recurso-$1.html  [R=301,L]
+
+# /autor-elias-alexander  →  /autor-elias-alexander.html
+RewriteRule ^autor-elias-alexander/?$  /autor-elias-alexander.html  [R=301,L]
+
+# /autor-lucas-rodriguez  →  /autor-lucas-rodriguez.html
+RewriteRule ^autor-lucas-rodriguez/?$  /autor-lucas-rodriguez.html  [R=301,L]
+
+# /legales  →  /Legales.html
+RewriteRule ^legales/?$  /Legales.html  [R=301,L]
+
+# ─── Página de error 404 ──────────────────────
+ErrorDocument 404 /index.html
+
+# ─── Seguridad: cabeceras HTTP ─────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # HSTS (activar solo cuando el SSL esté confirmado)
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ─── Compresión GZIP ──────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml text/plain
+</IfModule>
+
+# ─── Cache: assets estáticos ──────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/jpeg               "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 1 month"
+  ExpiresByType text/css                 "access plus 1 month"
+  ExpiresByType application/javascript   "access plus 1 month"
+  ExpiresByType application/json         "access plus 1 week"
+  ExpiresByType text/html                "access plus 1 day"
+</IfModule>
+
+# ─── Proteger archivos sensibles ──────────────
+# (NO incluir mailerlite.js — el navegador lo necesita cargar.
+#  NO bloquear del todo subscribe.php — necesita recibir POST.)
+<FilesMatch "(\.htaccess|\.env|\.env\.local|composer\.(json|lock)|\.git)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# ─── subscribe.php: sólo acepta POST (no acceso directo) ─
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_METHOD} !POST
+  RewriteCond %{REQUEST_URI} subscribe\.php$
+  RewriteRule ^ - [F,L]
+</IfModule>

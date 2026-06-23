@@ -1,0 +1,146 @@
+/* ═══════════════════════════════════════════════════════════
+   CREA · RECURSOS — ARCHIVO EDITORIAL (mosaico)
+   Rompe la "lista eterna de notas": ritmo con tarjetas LEAD
+   (a lo ancho), empaquetado denso y color por categoría.
+   Carga DESPUÉS de recursos-editorial.css. No toca el JS:
+   el filtro/buscador siguen usando .post / .is-hidden.
+   REGLA: Clash Display SIEMPRE en MAYÚSCULA.
+═══════════════════════════════════════════════════════════ */
+
+/* ── 1 · GRILLA EN MOSAICO ──────────────────────────────────
+   Empaquetado denso: las LEAD ocupan 2 columnas y el resto
+   rellena los huecos. Al filtrar (display:none) reflota solo. */
+.posts {
+  grid-auto-flow: dense;
+  align-items: stretch;
+}
+
+/* ── 2 · COLOR POR CATEGORÍA (punto en el tag) ──────────────
+   Hues hermanados (misma L/C en oklch) — scaneable, on-brand. */
+.post[data-cat="estrategia"] { --catc: #1B2F6E; }
+.post[data-cat="rubros"]     { --catc: oklch(0.62 0.13 162); }
+.post[data-cat="contenido"]  { --catc: oklch(0.62 0.13 56); }
+.post[data-cat="branding"]   { --catc: #CC2233; }
+.post[data-cat="paid"]       { --catc: oklch(0.60 0.16 24); }
+.post[data-cat="web"]        { --catc: oklch(0.60 0.13 244); }
+.post[data-cat="ia"]         { --catc: oklch(0.58 0.15 286); }
+
+.post .post__tag {
+  display: inline-flex; align-items: center; gap: 7px;
+}
+.post .post__tag::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--catc, #1B2F6E); flex-shrink: 0;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--catc, #1B2F6E) 18%, transparent);
+}
+
+/* ── 3 · TARJETA LEAD (a lo ancho, horizontal) ──────────────
+   Da jerarquía y corta la monotonía cada varias notas. */
+.post--lead {
+  grid-column: span 2;
+  flex-direction: row;
+  border-color: transparent;
+  box-shadow: var(--shadow-soft);
+}
+.post--lead .post__media {
+  width: 46%; flex-shrink: 0; aspect-ratio: auto;
+  align-self: stretch; min-height: 260px;
+}
+.post--lead .post__body {
+  width: 54%; justify-content: center;
+  padding: clamp(24px, 2.6vw, 40px);
+}
+.post--lead .post__title {
+  font-size: clamp(23px, 2.3vw, 31px); line-height: 1.04;
+}
+.post--lead .post__excerpt {
+  font-size: 15.5px; line-height: 1.6; margin-top: 14px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.post--lead .post__byline { margin-top: 22px; }
+/* etiqueta "Destacado" sutil sobre la imagen del lead */
+.post--lead .post__type::after {
+  content: " · Destacado"; color: #FFC9CF;
+}
+.post--lead:hover { box-shadow: var(--shadow-lift); }
+
+/* ── 4 · RESPONSIVE ─────────────────────────────────────────
+   En 2 columnas el lead ocupa la fila completa (sigue horizontal);
+   en 1 columna vuelve a apilarse en vertical como tarjeta normal. */
+@media (max-width: 980px) {
+  .post--lead { grid-column: 1 / -1; }
+  .post--lead .post__media { min-height: 240px; }
+}
+@media (max-width: 680px) {
+  .post--lead { flex-direction: column; }
+  .post--lead .post__media,
+  .post--lead .post__body { width: 100%; }
+  .post--lead .post__media { aspect-ratio: 16/10; min-height: 0; }
+  .post--lead .post__body { padding: 22px 22px 24px; }
+  .post--lead .post__title { font-size: 20px; }
+}
+
+/* ── 5 · BANNERS DE SERVICIO (house ads en el feed) ─────────
+   Cortan la "lista eterna": cada tantas notas, un bloque que
+   presume un servicio. Ocupan la fila completa. Se ocultan
+   solos cuando hay filtro/búsqueda activos (recursos-archive.js). */
+.feedad {
+  grid-column: 1 / -1;
+  position: relative; overflow: hidden; isolation: isolate;
+  display: block; border-radius: 20px; border: 1px solid var(--line);
+  min-height: 188px;
+  transition: transform .4s var(--spring), box-shadow .4s var(--spring);
+}
+.feedad:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.feedad.is-hidden { display: none; }
+.feedad__bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.feedad__grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(120% 90% at 85% 8%, #000, transparent 70%);
+  mask-image: radial-gradient(120% 90% at 85% 8%, #000, transparent 70%);
+}
+.feedad__in {
+  position: relative; z-index: 2; height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: clamp(22px, 4vw, 52px); padding: clamp(28px, 3.2vw, 44px) clamp(26px, 3.6vw, 52px);
+}
+.feedad__txt { max-width: 62ch; }
+.feedad__lab {
+  font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 11px;
+}
+.feedad__lab::before { content: ""; width: 24px; height: 1.5px; background: currentColor; opacity: 0.7; }
+.feedad__title {
+  font-family: var(--f-display); text-transform: uppercase; font-weight: 600; letter-spacing: 0.004em;
+  font-size: clamp(23px, 2.6vw, 37px); line-height: 1.0; margin-top: 15px; max-width: 20ch; text-wrap: balance;
+}
+.feedad__sub { font-family: var(--f-ui); font-size: 15px; line-height: 1.55; margin-top: 14px; text-wrap: pretty; }
+.feedad__cta { white-space: nowrap; flex-shrink: 0; }
+.feedad__cta .arrow { transition: transform .3s var(--spring); }
+.feedad:hover .feedad__cta .arrow { transform: translateX(5px); }
+
+/* variante NAVY — premium, con textura */
+.feedad--navy { background: var(--navy-deep, #101e4c); border-color: transparent; color: #fff; }
+.feedad--navy .feedad__lab { color: #FF8A98; }
+.feedad--navy .feedad__sub { color: rgba(255,255,255,0.74); }
+.feedad--navy .feedad__title .ac { color: #FF6376; -webkit-text-fill-color: #FF6376; }
+
+/* variante ROJA — energía */
+.feedad--red { background: linear-gradient(135deg, #CC2233 0%, #9E1828 100%); border-color: transparent; color: #fff; }
+.feedad--red .feedad__lab { color: rgba(255,255,255,0.82); }
+.feedad--red .feedad__sub { color: rgba(255,255,255,0.86); }
+
+/* variante PAPER — cierre, hacia el contacto */
+.feedad--paper { background: var(--paper-2, #efece6); color: var(--ink); }
+.feedad--paper .feedad__lab { color: var(--red); }
+.feedad--paper .feedad__sub { color: var(--text-mid); }
+
+@media (max-width: 680px) {
+  .feedad__in { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .feedad__cta { width: 100%; justify-content: center; }
+  .feedad__title { font-size: 22px; max-width: none; }
+}

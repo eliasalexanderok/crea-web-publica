@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legales · Términos, Privacidad y Cómo trabajamos · CREA</title>
+<meta name="description" content="Términos y condiciones, política de privacidad y protección de datos (Ley 25.326), política de cookies, consentimiento de email marketing y condiciones de servicio de CREA — Crea Tu Contenido.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://creatucontenido.com.ar/legales">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legales · CREA">
+<meta property="og:description" content="Términos, privacidad, cookies, email marketing y condiciones de servicio de CREA.">
+<meta property="og:image" content="https://creatucontenido.com.ar/assets/editorial/papers.webp">
+<meta property="og:url" content="https://creatucontenido.com.ar/legales">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="web.css">
+<link rel="stylesheet" href="recursos.css">
+<link rel="stylesheet" href="recursos-visuals.css">
+<style>
+  /* ── Legales · estilos propios ── */
+  .lg-hero{position:relative;overflow:hidden;background:var(--navy);color:var(--paper);padding:140px 0 64px}
+  .lg-hero__bg{position:absolute;inset:0;opacity:.5;pointer-events:none}
+  .lg-hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse 80% 70% at 30% 0%,#000,transparent 75%)}
+  .lg-hero__orb{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(80px);opacity:.32;top:-220px;right:-120px;background:radial-gradient(circle,#4D7FE8,transparent 70%)}
+  .lg-hero__orb--red{top:auto;bottom:-300px;right:auto;left:-160px;width:440px;height:440px;background:radial-gradient(circle,var(--red),transparent 70%);opacity:.26}
+  .lg-hero__inner{position:relative;z-index:2}
+  .lg-hero .crumb a{color:#9fb0e0}
+  .lg-hero .crumb .cur{color:#cdd6ee}
+  .lg-eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#9fb0e0;margin-bottom:18px;display:block}
+  .lg-hero h1{font-family:var(--f-display);text-transform:uppercase;font-weight:600;font-size:clamp(38px,6vw,76px);line-height:.96;letter-spacing:.01em;margin-bottom:22px}
+  .lg-hero h1 .ac{color:#8fa6e6}
+  .lg-hero__deck{max-width:660px;font-size:18px;line-height:1.6;color:#d7ddf0}
+  .lg-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .lg-meta span{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 15px;color:#cfd7ef}
+  .lg-meta b{color:#fff;font-weight:600}
+
+  /* layout */
+  .lg-wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .lg-layout{display:grid;grid-template-columns:1fr 280px;gap:64px;align-items:start;padding:64px 0 40px}
+  .lg-main{min-width:0;max-width:760px;grid-column:1}
+  .lg-toc{grid-column:2}
+
+  /* índice lateral */
+  .lg-toc{position:sticky;top:96px}
+  .lg-toc__lab{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut,#5a6076);margin-bottom:14px}
+  .lg-toc__list{display:flex;flex-direction:column;gap:2px}
+  .lg-toc__list a{display:flex;gap:10px;align-items:baseline;font-size:14px;color:#41485f;text-decoration:none;padding:7px 10px;border-radius:8px;border-left:2px solid transparent;transition:.18s;line-height:1.35}
+  .lg-toc__list a:hover{background:rgba(27,47,110,.06);color:var(--navy)}
+  .lg-toc__list a.on{background:rgba(27,47,110,.08);border-left-color:var(--red);color:var(--navy);font-weight:600}
+  .lg-toc__n{font-family:var(--f-mono);font-size:11px;color:var(--red);font-weight:700;flex:none;min-width:18px}
+  .lg-toc__cta{margin-top:22px;padding-top:20px;border-top:1px solid rgba(27,47,110,.12)}
+  .lg-toc__cta p{font-size:13px;color:#52596f;margin-bottom:12px;line-height:1.5}
+
+  /* bloques de sección */
+  .lg-sec{padding:18px 0 12px;border-top:1px solid rgba(27,47,110,.1);margin-top:40px;scroll-margin-top:96px}
+  .lg-sec:first-of-type{border-top:0;margin-top:0}
+  .lg-sec__n{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;color:var(--red);font-weight:700;text-transform:uppercase}
+  .lg-sec h2{font-family:var(--f-display);text-transform:uppercase;font-weight:600;font-size:clamp(24px,3vw,34px);line-height:1.04;letter-spacing:.01em;color:var(--navy);margin:8px 0 18px}
+  .lg-sec h3{font-family:var(--f-ui),'Inter',sans-serif;font-weight:700;font-size:18px;color:var(--ink,#13182b);margin:26px 0 8px;letter-spacing:-.01em}
+  .lg-sec p{font-size:16px;line-height:1.7;color:#33384a;margin-bottom:14px;text-wrap:pretty}
+  .lg-sec a{color:var(--navy);text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(27,47,110,.35)}
+  .lg-sec a:hover{text-decoration-color:var(--red)}
+  .lg-sec ul{margin:0 0 16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+  .lg-sec li{position:relative;padding-left:26px;font-size:16px;line-height:1.62;color:#33384a}
+  .lg-sec li::before{content:"";position:absolute;left:4px;top:10px;width:7px;height:7px;border-radius:2px;background:var(--red);transform:rotate(45deg)}
+  .lg-sec li b{color:var(--ink,#13182b)}
+  .lg-sec strong{color:var(--ink,#13182b);font-weight:600}
+
+  /* tarjeta de datos del responsable */
+  .lg-id{background:#fff;border:1px solid rgba(27,47,110,.14);border-radius:18px;padding:28px 30px;box-shadow:0 26px 60px -38px rgba(27,47,110,.4)}
+  .lg-id__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px 28px}
+  .lg-id dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#697089;margin-bottom:4px}
+  .lg-id dd{font-size:15.5px;font-weight:500;color:var(--ink,#13182b);word-break:break-word}
+  .lg-id dd a{font-weight:600}
+
+  /* callout */
+  .lg-call{background:rgba(27,47,110,.045);border:1px solid rgba(27,47,110,.12);border-left:3px solid var(--red);border-radius:0 14px 14px 0;padding:20px 24px;margin:22px 0}
+  .lg-call p{margin:0;font-size:15px;color:#2b3147}
+  .lg-call p+p{margin-top:8px}
+  .lg-call b{color:var(--navy)}
+
+  /* tabla simple cookies */
+  .lg-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+  .lg-table th,.lg-table td{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(27,47,110,.12);vertical-align:top}
+  .lg-table th{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#697089;font-weight:500;background:rgba(27,47,110,.04)}
+  .lg-table td b{color:var(--ink,#13182b)}
+  .lg-table tr:last-child td{border-bottom:0}
+
+  /* updated note */
+  .lg-updated{font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;color:#6b7289;margin-top:6px}
+
+  /* steps cómo trabajamos */
+  .lg-steps{display:flex;flex-direction:column;gap:0;margin:20px 0 6px;counter-reset:s}
+  .lg-step{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:18px 0;border-bottom:1px dashed rgba(27,47,110,.18)}
+  .lg-step:last-child{border-bottom:0}
+  .lg-step__n{font-family:var(--f-display);font-weight:600;font-size:26px;color:var(--navy);line-height:1;opacity:.9}
+  .lg-step h3{margin:0 0 5px}
+  .lg-step p{margin:0;font-size:15px;color:#454b60;line-height:1.6}
+
+  .lg-foot-note{font-size:13.5px;color:#6b7289;line-height:1.6;margin-top:48px;padding-top:22px;border-top:1px solid rgba(27,47,110,.1)}
+
+  @media(max-width:900px){
+    .lg-layout{grid-template-columns:1fr;gap:0;padding-top:40px}
+    .lg-toc{display:none}
+  }
+  @media(max-width:560px){
+    .lg-wrap{padding:0 20px}
+    .lg-hero{padding:120px 0 52px}
+    .lg-id{padding:22px 20px}
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CREA Legales">
+    <rect width="100" height="100" rx="22" fill="#1B2F6E"></rect>
+    <rect x="30" y="26" width="40" height="50" rx="5" fill="#F6F4F0"></rect>
+    <rect x="37" y="36" width="26" height="4" rx="2" fill="#1B2F6E"></rect>
+    <rect x="37" y="45" width="26" height="3" rx="1.5" fill="#4D7FE8"></rect>
+    <rect x="37" y="53" width="18" height="3" rx="1.5" fill="#9aa8c8"></rect>
+    <rect x="37" y="61" width="22" height="3" rx="1.5" fill="#CC2233"></rect>
+  </svg>
+</template>
+
+<div class="progress" id="progress"></div>
+
+<!-- ════════ NAV ════════ -->
+<header class="nav scrolled" id="nav">
+  <a href="index.html" aria-label="CREA">
+    <img class="nav__logo nav__logo--light" src="assets/logo-white.png" alt="CREA">
+    <img class="nav__logo nav__logo--dark" src="assets/logo-color.png" alt="CREA">
+  </a>
+  <nav class="nav__right">
+    <a class="nav__link nav__links-inline" href="index.html#servicios">Servicios</a>
+    <a class="nav__link nav__links-inline" href="index.html#combos">Combos</a>
+    <a class="nav__link nav__links-inline" href="Recursos.html">Recursos</a>
+    <a class="nav__cta btn btn--ghost-light nav__links-inline" href="index.html#contacto">Reservá tu sesión</a>
+    <button class="nav__burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<nav class="mnav" id="mnav">
+  <a href="index.html#servicios">Servicios</a>
+  <a href="index.html#combos">Combos</a>
+  <a href="Recursos.html">Recursos</a>
+  <a href="index.html">← Volver a la web</a>
+  <a class="btn btn--wa btn--lg" href="https://wa.me/5491139261873?text=Hola%20CREA%2C%20tengo%20una%20consulta%20legal%2Fde%20datos" target="_blank" rel="noopener">Contactar →</a>
+</nav>
+
+<!-- ════════ HERO ════════ -->
+<header class="lg-hero">
+  <div class="lg-hero__bg" aria-hidden="true">
+    <div class="lg-hero__grid"></div>
+    <div class="lg-hero__orb"></div>
+    <div class="lg-hero__orb lg-hero__orb--red"></div>
+  </div>
+  <div class="lg-wrap lg-hero__inner">
+    <div class="crumb"><a href="index.html">Inicio</a><span class="sep">/</span><span class="cur">Legales</span></div>
+    <span class="lg-eyebrow">Centro legal · Crea Tu Contenido</span>
+    <h1>Términos,<br>privacidad y<br><span class="ac">cómo trabajamos</span></h1>
+    <p class="lg-hero__deck">Todo en un solo lugar: las reglas de uso del sitio, qué hacemos con tus datos, cómo manejamos el email y las cookies, y las condiciones bajo las que prestamos nuestros servicios. Claro, completo y sin letra chica escondida.</p>
+    <div class="lg-meta">
+      <span><b>Vigente desde</b> · 20 jun 2026</span>
+      <span><b>Jurisdicción</b> · Argentina</span>
+      <span><b>Ley</b> · 25.326 de Datos Personales</span>
+    </div>
+  </div>
+</header>
+
+<div class="lg-wrap">
+  <div class="lg-layout">
+
+    <!-- ÍNDICE -->
+    <aside class="lg-toc" aria-label="Índice de secciones">
+      <p class="lg-toc__lab">En esta página</p>
+      <nav class="lg-toc__list" id="lgToc">
+        <a href="#responsable"><span class="lg-toc__n">01</span>Quién es el responsable</a>
+        <a href="#terminos"><span class="lg-toc__n">02</span>Términos de uso del sitio</a>
+        <a href="#privacidad"><span class="lg-toc__n">03</span>Privacidad y datos</a>
+        <a href="#derechos"><span class="lg-toc__n">04</span>Tus derechos (datos)</a>
+        <a href="#cookies"><span class="lg-toc__n">05</span>Cookies</a>
+        <a href="#email"><span class="lg-toc__n">06</span>Email &amp; newsletter</a>
+        <a href="#whatsapp"><span class="lg-toc__n">07</span>WhatsApp y mensajería</a>
+        <a href="#trabajamos"><span class="lg-toc__n">08</span>Cómo trabajamos</a>
+        <a href="#propiedad"><span class="lg-toc__n">09</span>Propiedad intelectual</a>
+        <a href="#responsabilidad"><span class="lg-toc__n">10</span>Responsabilidad</a>
+        <a href="#cambios"><span class="lg-toc__n">11</span>Cambios y contacto</a>
+      </nav>
+      <div class="lg-toc__cta">
+        <p>¿Una duda puntual sobre datos o condiciones?</p>
+        <a class="btn btn--wa" href="https://wa.me/5491139261873?text=Hola%20CREA%2C%20tengo%20una%20consulta%20legal%2Fde%20datos" target="_blank" rel="noopener" style="font-size:13px">Escribinos <span class="arrow">→</span></a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="lg-main">
+
+      <!-- 01 RESPONSABLE -->
+      <section class="lg-sec" id="responsable">
+        <span class="lg-sec__n">01 — Identificación</span>
+        <h2>Quién es el responsable</h2>
+        <p>Este sitio web y los servicios que en él se describen son operados por <strong>CREA — Crea Tu Contenido (CTC)</strong>, estudio creativo de estrategia, contenido y marca, con base en la Ciudad Autónoma de Buenos Aires, Argentina. A lo largo de este documento nos referimos a nosotros como "CREA", "el estudio", "nosotros"; y a vos, persona que usa el sitio o nos contrata, como "el usuario", "el cliente" o "vos".</p>
+        <div class="lg-id">
+          <dl class="lg-id__grid">
+            <div><dt>Nombre comercial</dt><dd>CREA · Crea Tu Contenido</dd></div>
+            <div><dt>Responsable</dt><dd>Elías Alexander — Founder &amp; Director</dd></div>
+            <div><dt>Domicilio</dt><dd>Ciudad Autónoma de Buenos Aires, Argentina</dd></div>
+            <div><dt>Email de contacto</dt><dd><a href="mailto:creatucontenido.contacto@gmail.com">creatucontenido.contacto@gmail.com</a></dd></div>
+            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5491139261873" target="_blank" rel="noopener">+54 9 11 3926-1873</a></dd></div>
+            <div><dt>Sitio web</dt><dd>creatucontenido.com</dd></div>
+          </dl>
+        </div>
+        <p class="lg-updated">Última actualización de este documento: 20 de junio de 2026.</p>
+      </section>
+
+      <!-- 02 TÉRMINOS -->
+      <section class="lg-sec" id="terminos">
+        <span class="lg-sec__n">02 — Sitio</span>
+        <h2>Términos y condiciones de uso del sitio</h2>
+        <p>Al navegar y usar este sitio aceptás estos términos. Si no estás de acuerdo con alguno, te pedimos que no utilices el sitio.</p>
+        <h3>Uso permitido</h3>
+        <ul>
+          <li>El sitio es de carácter <b>informativo</b>: presenta nuestros servicios, recursos y contenidos. No constituye una oferta vinculante ni un contrato hasta que firmemos o acordemos por escrito una propuesta puntual.</li>
+          <li>Podés leer, compartir enlaces y citar nuestros contenidos con atribución, siempre con fines lícitos y de buena fe.</li>
+          <li>Te comprometés a no usar el sitio para fines fraudulentos, ni a intentar vulnerar su seguridad, sobrecargarlo, scrapearlo de forma masiva o introducir código malicioso.</li>
+        </ul>
+        <h3>Disponibilidad</h3>
+        <p>Hacemos lo posible por mantener el sitio en línea y actualizado, pero no garantizamos disponibilidad ininterrumpida. Podemos modificar, suspender o discontinuar secciones sin previo aviso por mantenimiento, mejoras o causas de fuerza mayor.</p>
+        <h3>Enlaces a terceros</h3>
+        <p>El sitio puede enlazar a plataformas externas (Instagram, WhatsApp, Google, herramientas de terceros). No somos responsables del contenido ni de las políticas de privacidad de esos sitios; te recomendamos leer sus propios términos.</p>
+        <h3>Contenidos y precios de referencia</h3>
+        <p>Los valores, planes y combos que se mencionan son <strong>de referencia</strong> y pueden variar según el alcance real de cada proyecto, la moneda y el momento. El precio final siempre se confirma por escrito en una propuesta antes de comenzar.</p>
+      </section>
+
+      <!-- 03 PRIVACIDAD -->
+      <section class="lg-sec" id="privacidad">
+        <span class="lg-sec__n">03 — Datos personales</span>
+        <h2>Política de privacidad y protección de datos</h2>
+        <p>Tu privacidad nos importa. Esta política explica qué datos recolectamos, para qué, con qué base legal y por cuánto tiempo. Tratamos tus datos conforme a la <strong>Ley N° 25.326 de Protección de los Datos Personales</strong> de la República Argentina y su normativa complementaria.</p>
+
+        <h3>Qué datos recolectamos</h3>
+        <ul>
+          <li><b>Datos que nos das vos:</b> nombre, email, teléfono / WhatsApp y el mensaje o información sobre tu marca que escribís en nuestros formularios, en el chat del sitio o al suscribirte al newsletter.</li>
+          <li><b>Datos de navegación:</b> de forma agregada y, en general, anónima — páginas visitadas, tipo de dispositivo y datos técnicos básicos, a través de cookies y herramientas de medición (ver sección 05).</li>
+          <li><b>No solicitamos datos sensibles.</b> Te pedimos que no nos envíes información sensible (salud, ideología, datos de terceros) a través de los formularios.</li>
+        </ul>
+
+        <h3>Para qué los usamos</h3>
+        <ul>
+          <li>Responder tu consulta y darte un diagnóstico o propuesta.</li>
+          <li>Prestarte el servicio contratado y gestionar la relación comercial.</li>
+          <li>Enviarte —solo si lo pediste— nuestro newsletter y comunicaciones de marketing.</li>
+          <li>Mejorar el sitio, nuestros contenidos y la experiencia general.</li>
+          <li>Cumplir obligaciones legales, contables y fiscales.</li>
+        </ul>
+
+        <h3>Base legal</h3>
+        <p>Tratamos tus datos sobre la base de tu <strong>consentimiento</strong> (que das al completar un formulario o suscribirte), de la <strong>ejecución de un contrato o de medidas precontractuales</strong> a tu pedido, y del <strong>cumplimiento de obligaciones legales</strong>.</p>
+
+        <h3>Con quién los compartimos</h3>
+        <p>No vendemos ni alquilamos tus datos. Podemos compartirlos únicamente con <strong>proveedores que nos ayudan a operar</strong> (por ejemplo, plataformas de email marketing, hosting, mensajería o analítica), que actúan como encargados de tratamiento y solo pueden usarlos para prestarnos su servicio. Algunos de estos proveedores pueden estar radicados fuera de Argentina; en ese caso procuramos que ofrezcan niveles de protección adecuados.</p>
+
+        <h3>Cuánto tiempo los conservamos</h3>
+        <p>Conservamos tus datos mientras dure la relación con vos y, luego, el tiempo necesario para cumplir obligaciones legales o atender posibles reclamos. Cuando ya no son necesarios, los eliminamos o anonimizamos. Si te suscribiste al newsletter, conservamos tu email hasta que te des de baja.</p>
+
+        <h3>Seguridad</h3>
+        <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos. Ningún sistema es 100% infalible, pero trabajamos para minimizar riesgos y actuar rápido ante cualquier incidente.</p>
+
+        <div class="lg-call">
+          <p><b>Datos de menores.</b> Nuestros servicios están dirigidos a personas mayores de edad y a empresas. No recolectamos intencionalmente datos de menores de 18 años. Si creés que un menor nos envió datos, escribinos y los eliminaremos.</p>
+        </div>
+      </section>
+
+      <!-- 04 DERECHOS -->
+      <section class="lg-sec" id="derechos">
+        <span class="lg-sec__n">04 — Tus derechos</span>
+        <h2>Tus derechos sobre tus datos</h2>
+        <p>Como titular de los datos, la Ley 25.326 te garantiza los derechos de <strong>acceso, rectificación, actualización y supresión</strong> de tu información personal. En cualquier momento podés:</p>
+        <ul>
+          <li><b>Acceder</b> y saber qué datos tuyos tenemos.</li>
+          <li><b>Rectificar</b> o actualizar los que estén incompletos o desactualizados.</li>
+          <li><b>Suprimir</b> tus datos o pedir que dejemos de tratarlos.</li>
+          <li><b>Retirar tu consentimiento</b> para el envío de comunicaciones, sin que ello afecte el servicio contratado.</li>
+        </ul>
+        <p>Para ejercerlos, escribinos a <a href="mailto:creatucontenido.contacto@gmail.com">creatucontenido.contacto@gmail.com</a> indicando tu pedido. Respondemos en un plazo razonable conforme a la ley.</p>
+        <div class="lg-call">
+          <p><b>Autoridad de control.</b> El titular de los datos podrá presentar reclamos ante la <b>Agencia de Acceso a la Información Pública (AAIP)</b>, órgano de control de la Ley N° 25.326, en caso de considerar vulnerados sus derechos.</p>
+        </div>
+      </section>
+
+      <!-- 05 COOKIES -->
+      <section class="lg-sec" id="cookies">
+        <span class="lg-sec__n">05 — Cookies</span>
+        <h2>Política de cookies</h2>
+        <p>Las cookies son pequeños archivos que se guardan en tu dispositivo para que el sitio funcione y para entender, de forma agregada, cómo se usa. Usamos las mínimas necesarias.</p>
+        <table class="lg-table">
+          <thead><tr><th>Tipo</th><th>Para qué sirve</th><th>¿Se puede desactivar?</th></tr></thead>
+          <tbody>
+            <tr><td><b>Técnicas / esenciales</b></td><td>Que el sitio cargue, recuerde tus preferencias básicas y funcione el chat y los formularios.</td><td>No (son imprescindibles).</td></tr>
+            <tr><td><b>De medición</b></td><td>Entender de forma anónima qué páginas se visitan más, para mejorar el contenido.</td><td>Sí.</td></tr>
+            <tr><td><b>De marketing</b></td><td>Si en algún momento se activan, ayudan a mostrar publicidad relevante en plataformas como Meta o Google.</td><td>Sí.</td></tr>
+          </tbody>
+        </table>
+        <p>Podés <strong>borrar o bloquear las cookies</strong> desde la configuración de tu navegador en cualquier momento. Tené en cuenta que desactivar algunas puede afectar el funcionamiento del sitio.</p>
+        <p>El sitio también puede usar almacenamiento local del navegador (localStorage) para recordar, por ejemplo, si ya viste la intro o tu lugar en un contenido. Esa información queda en tu dispositivo y no la usamos para identificarte.</p>
+      </section>
+
+      <!-- 06 EMAIL -->
+      <section class="lg-sec" id="email">
+        <span class="lg-sec__n">06 — Email marketing</span>
+        <h2>Email &amp; newsletter</h2>
+        <p>Si te suscribís a nuestro newsletter, lo hacés de forma <strong>voluntaria y con tu consentimiento expreso</strong>. Esto es lo que podés esperar:</p>
+        <ul>
+          <li><b>Solo si te sumás.</b> Te escribimos únicamente si dejaste tu email en un formulario de suscripción. No compramos listas ni agregamos a nadie sin permiso.</li>
+          <li><b>Qué te llega.</b> Contenido útil sobre marca, contenido, pauta e IA, novedades y, ocasionalmente, ofertas de nuestros servicios. Apuntamos a calidad, no a volumen.</li>
+          <li><b>Baja en un clic.</b> Todos los emails incluyen un enlace de <strong>desuscripción</strong>. También podés pedir la baja escribiéndonos. La procesamos sin demoras.</li>
+          <li><b>Sin spam.</b> No cedemos tu email a terceros para que te escriban. Tu dirección se gestiona a través de plataformas de email marketing que actúan como encargadas de tratamiento.</li>
+        </ul>
+        <div class="lg-call">
+          <p><b>Comunicaciones del servicio.</b> Si sos cliente, además del newsletter podemos enviarte emails operativos relacionados con tu proyecto (propuestas, entregas, facturación). Estos no son marketing y son parte de la prestación del servicio.</p>
+        </div>
+      </section>
+
+      <!-- 07 WHATSAPP -->
+      <section class="lg-sec" id="whatsapp">
+        <span class="lg-sec__n">07 — Mensajería</span>
+        <h2>WhatsApp y otras vías de contacto</h2>
+        <p>Gran parte de nuestra comunicación sucede por <strong>WhatsApp</strong>. Al escribirnos por ese medio:</p>
+        <ul>
+          <li>Aceptás que usemos tu número y los datos que compartas para responderte y dar seguimiento a tu consulta o proyecto.</li>
+          <li>La conversación se rige también por los términos y la política de privacidad de WhatsApp, que es un servicio de un tercero.</li>
+          <li>Usamos tu número únicamente para hablar de tu consulta o servicio, no para enviarte mensajes masivos no solicitados.</li>
+        </ul>
+        <p>El <strong>chat del sitio</strong> es una herramienta de asistencia. Las consultas pueden derivarse a una persona del equipo por WhatsApp o email para continuar la conversación.</p>
+      </section>
+
+      <!-- 08 CÓMO TRABAJAMOS -->
+      <section class="lg-sec" id="trabajamos">
+        <span class="lg-sec__n">08 — Condiciones de servicio</span>
+        <h2>Cómo trabajamos</h2>
+        <p>Estas son las condiciones generales bajo las que prestamos nuestros servicios. Cada proyecto se confirma además con una propuesta puntual; ante cualquier diferencia, prevalece lo acordado por escrito en esa propuesta.</p>
+
+        <div class="lg-steps">
+          <div class="lg-step"><span class="lg-step__n">01</span><div><h3>Sesión y propuesta</h3><p>Todo arranca con una Sesión Estratégica sin cargo. A partir de ahí preparamos una propuesta con alcance, entregables, plazos y valor. No hay trabajo ni cobro hasta que la aceptás.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">02</span><div><h3>Alcance y cambios</h3><p>La propuesta define qué incluye el servicio. Pedidos por fuera de ese alcance se cotizan aparte. Trabajamos con rondas de revisión razonables acordadas para cada entregable.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">03</span><div><h3>Precios y moneda</h3><p>Manejamos valores de referencia en <b>USD</b>. Si estás en Argentina, pagás en <b>pesos</b> al tipo de cambio del día; si estás en el exterior, en USD. El detalle de cada plan se confirma por escrito.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">04</span><div><h3>Pagos</h3><p>Los servicios mensuales se abonan por adelantado al inicio de cada ciclo. Los proyectos puntuales pueden requerir una seña para reservar la fecha y comenzar. La facturación se emite según corresponda.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">05</span><div><h3>Plazos y colaboración</h3><p>Cumplimos los plazos acordados siempre que recibamos a tiempo los materiales, accesos y aprobaciones que dependen de tu lado. Las demoras en esas entregas pueden correr el cronograma.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">06</span><div><h3>Cancelación</h3><p>Los servicios mensuales pueden darse de baja avisando con la anticipación acordada (habitualmente 30 días). Los importes ya abonados por trabajo en curso o producciones agendadas no son reembolsables.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">07</span><div><h3>Resultados</h3><p>Trabajamos con profesionalismo y método, pero el marketing depende de muchos factores. <b>No garantizamos resultados específicos</b> (ventas, seguidores o posiciones), sino la calidad y el compromiso del trabajo acordado.</p></div></div>
+          <div class="lg-step"><span class="lg-step__n">08</span><div><h3>Confidencialidad</h3><p>Tratamos con reserva la información sensible de tu negocio a la que accedamos. Esperamos la misma reserva sobre nuestros métodos, propuestas y materiales.</p></div></div>
+        </div>
+      </section>
+
+      <!-- 09 PROPIEDAD -->
+      <section class="lg-sec" id="propiedad">
+        <span class="lg-sec__n">09 — Propiedad intelectual</span>
+        <h2>Propiedad intelectual</h2>
+        <h3>Del sitio y la marca</h3>
+        <p>La marca CREA, su logo, los textos, el diseño, el código y los contenidos de este sitio son de su titularidad o se usan con licencia. No podés copiarlos, reproducirlos ni usarlos comercialmente sin autorización previa por escrito.</p>
+        <h3>De los trabajos para clientes</h3>
+        <ul>
+          <li><b>Entregables finales.</b> Una vez cancelado el total del proyecto, los entregables finales aprobados (piezas, identidad, contenidos producidos para vos) quedan para tu uso según lo acordado en la propuesta.</li>
+          <li><b>Materiales de trabajo.</b> Archivos editables, fuentes, plantillas internas, métodos y materiales intermedios siguen siendo de CREA salvo acuerdo expreso en contrario.</li>
+          <li><b>Recursos de terceros.</b> Tipografías, imágenes de stock, música o software de terceros se rigen por sus propias licencias, que te informamos cuando corresponde.</li>
+        </ul>
+        <h3>Uso de imagen, portfolio y grabaciones</h3>
+        <p>Al contratarnos, nos autorizás a documentar y difundir nuestro trabajo con fines de portfolio y promoción. En concreto:</p>
+        <ul>
+          <li><b>Portfolio y casos.</b> Salvo que nos pidas lo contrario por escrito, podemos mostrar el trabajo realizado para vos —piezas, identidad, contenidos y resultados— en nuestro portfolio, redes, presentaciones y materiales comerciales, con fines de difusión.</li>
+          <li><b>Backstage de producciones.</b> Durante las jornadas de producción podemos <strong>grabar y fotografiar el detrás de escena</strong> (set, equipo, proceso de trabajo). Ese material puede incluir tu imagen, la de tu marca y la de tu local, y podemos usarlo como contenido propio de CREA para mostrar cómo trabajamos.</li>
+          <li><b>Sesiones grabadas.</b> Las sesiones estratégicas y reuniones de trabajo <strong>pueden quedar grabadas</strong> para uso interno de CREA: registro, capacitación del equipo, mejora de nuestros procesos y, eventualmente, material de difusión. Si en algún tramo preferís que no grabemos, avisanos y lo respetamos.</li>
+          <li><b>Cesión de imagen.</b> Esta autorización de uso de imagen, voz y grabaciones se entiende otorgada sin límite de tiempo y sin contraprestación económica, para los fines indicados. Podés revocarla para usos futuros escribiéndonos a <a href="mailto:creatucontenido.contacto@gmail.com">creatucontenido.contacto@gmail.com</a>; la revocación no alcanza al material ya publicado de buena fe.</li>
+        </ul>
+      </section>
+
+      <!-- 10 RESPONSABILIDAD -->
+      <section class="lg-sec" id="responsabilidad">
+        <span class="lg-sec__n">10 — Límites</span>
+        <h2>Limitación de responsabilidad</h2>
+        <p>El sitio y sus contenidos se ofrecen "tal cual", con fines informativos. En la medida permitida por la ley:</p>
+        <ul>
+          <li>No respondemos por decisiones que tomes basándote únicamente en el contenido informativo del sitio o el blog, que no constituye asesoramiento profesional individualizado.</li>
+          <li>No respondemos por daños indirectos, lucro cesante o pérdidas derivadas del uso o la imposibilidad de uso del sitio.</li>
+          <li>No respondemos por fallas, interrupciones o ataques ajenos a nuestro control razonable, ni por el contenido de sitios de terceros enlazados.</li>
+        </ul>
+        <p>Nada en estos términos excluye responsabilidades que no puedan limitarse legalmente.</p>
+      </section>
+
+      <!-- 11 CAMBIOS -->
+      <section class="lg-sec" id="cambios">
+        <span class="lg-sec__n">11 — Vigencia</span>
+        <h2>Cambios, ley aplicable y contacto</h2>
+        <h3>Actualizaciones</h3>
+        <p>Podemos actualizar estas políticas para reflejar cambios en nuestros servicios o en la normativa. La versión vigente es siempre la publicada en esta página, con su fecha de actualización. Te recomendamos revisarla cada tanto.</p>
+        <h3>Ley aplicable y jurisdicción</h3>
+        <p>Estas condiciones se rigen por las leyes de la <strong>República Argentina</strong>. Ante cualquier controversia, las partes se someten a los tribunales ordinarios competentes de la Ciudad Autónoma de Buenos Aires, salvo que una norma imperativa disponga otra cosa.</p>
+        <h3>Contacto</h3>
+        <p>Por cualquier consulta sobre estos términos, tus datos o el ejercicio de tus derechos, escribinos a <a href="mailto:creatucontenido.contacto@gmail.com">creatucontenido.contacto@gmail.com</a> o por <a href="https://wa.me/5491139261873" target="_blank" rel="noopener">WhatsApp al +54 9 11 3926-1873</a>. Estamos para ayudarte.</p>
+
+        <p class="lg-foot-note">Este documento reúne los términos y condiciones de uso, la política de privacidad y protección de datos personales (Ley N° 25.326), la política de cookies, las condiciones de email marketing y las condiciones generales de servicio de CREA — Crea Tu Contenido. Documento meramente informativo; ante un proyecto concreto, prevalece la propuesta firmada entre las partes. Última actualización: 20 de junio de 2026.</p>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/logo-white.png" alt="CREA">
+        <p class="footer__tag">Estrategia, contenido e identidad para marcas con criterio. Hacemos que tu marca se vea como lo que vale.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navegá</h4>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#combos">Combos</a>
+          <a href="index.html#casos">Casos</a>
+          <a href="index.html#metodo">Método</a>
+          <a href="Recursos.html">Recursos &amp; Blog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legales</h4>
+          <a href="Legales.html#terminos">Términos y condiciones</a>
+          <a href="Legales.html#privacidad">Política de privacidad</a>
+          <a href="Legales.html#cookies">Cookies</a>
+          <a href="Legales.html#trabajamos">Cómo trabajamos</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <a href="https://wa.me/5491139261873" target="_blank" rel="noopener">WhatsApp · 11 3926-1873</a>
+          <a href="mailto:creatucontenido.contacto@gmail.com">creatucontenido.contacto@gmail.com</a>
+          <a href="https://instagram.com/creatucontenidook" target="_blank" rel="noopener">@creatucontenidook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 CREA · Todos los derechos reservados</span>
+      <span>Buenos Aires, Argentina · Desde 2015</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* nav burger + mnav (mismo patrón que el resto del sitio) */
+  (function(){
+    var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
+    if(burger&&mnav){burger.addEventListener('click',function(){mnav.classList.toggle('open');burger.classList.toggle('open');});}
+    /* progress bar */
+    var prog=document.getElementById('progress');
+    if(prog){window.addEventListener('scroll',function(){var h=document.documentElement;var sc=(h.scrollTop)/(h.scrollHeight-h.clientHeight);prog.style.transform='scaleX('+sc+')';},{passive:true});}
+    /* scrollspy índice */
+    var links=[].slice.call(document.querySelectorAll('#lgToc a'));
+    var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+    function spy(){
+      var y=window.scrollY+140, idx=0;
+      for(var i=0;i<secs.length;i++){if(secs[i]&&secs[i].offsetTop<=y)idx=i;}
+      links.forEach(function(a,i){a.classList.toggle('on',i===idx);});
+    }
+    window.addEventListener('scroll',spy,{passive:true});spy();
+    /* smooth scroll */
+    links.forEach(function(a){a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-90,behavior:'smooth'});}
+    });});
+  })();
+</script>
+
+</body>
+</html>

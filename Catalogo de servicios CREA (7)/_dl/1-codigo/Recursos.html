@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos & Blog · CREA — Estrategia, contenido y marca para crecer</title>
+<meta name="description" content="Guías, plantillas y aprendizajes reales sobre estrategia de contenido, branding, paid media, web y posicionamiento en IA. El blog de CREA para marcas que quieren dejar de improvisar.">
+<meta name="keywords" content="estrategia de contenido, calendario de contenido, branding, paid media, meta ads, google ads, posicionamiento en IA, GEO, SEO, marketing digital Argentina">
+<link rel="canonical" href="https://creatucontenido.com.ar/recursos">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Recursos & Blog · CREA">
+<meta property="og:description" content="Guías, plantillas y aprendizajes reales para hacer crecer tu marca. El blog de CREA.">
+<meta property="og:image" content="assets/editorial/papers.webp">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="web.css">
+<link rel="stylesheet" href="recursos.css">
+<link rel="stylesheet" href="recursos-premium.css">
+<link rel="stylesheet" href="recursos-editorial.css">
+<link rel="stylesheet" href="recursos-archive.css">
+<link rel="stylesheet" href="crea-intro.css">
+<style>
+/* Lo último — rediseño con tapa + fecha relativa */
+#ultimo .eindex{border-top:none;display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,1.6vw,22px);margin-top:6px}
+#ultimo .eindex__row{grid-template-columns:clamp(124px,16vw,168px) 1fr;align-items:stretch;gap:clamp(15px,1.5vw,22px);padding:14px;border:1px solid var(--line);border-radius:18px;background:var(--white)}
+#ultimo .eindex__row::before{inset:0;border-radius:18px}
+#ultimo .eindex__row:hover{box-shadow:0 22px 50px rgba(20,36,88,.12);transform:translateY(-3px)}
+#ultimo .eindex__row--feat{grid-column:1 / -1;grid-template-columns:clamp(220px,32vw,420px) 1fr auto}
+#ultimo .eindex__media{position:relative;border-radius:12px;overflow:hidden;background:var(--navy-deep);align-self:stretch;min-height:108px}
+#ultimo .eindex__row--feat .eindex__media{min-height:208px}
+#ultimo .eindex__media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-io)}
+#ultimo .eindex__row:hover .eindex__media img{transform:scale(1.06)}
+#ultimo .eindex__media .eindex__cat{position:absolute;top:9px;left:9px;background:rgba(16,30,76,.72);color:#fff;border:none;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);font-size:9.5px;padding:5px 10px}
+#ultimo .eindex__main{display:flex;flex-direction:column;justify-content:center;padding:4px 6px 4px 0;min-width:0}
+#ultimo .eindex__title{font-size:clamp(17px,1.5vw,21px);line-height:1.12}
+#ultimo .eindex__row--feat .eindex__title{font-size:clamp(22px,2.4vw,33px)}
+#ultimo .eindex__excerpt{font-size:13.5px;margin-top:7px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#ultimo .eindex__row--feat .eindex__excerpt{-webkit-line-clamp:3;font-size:15px}
+#ultimo .eindex__who{margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#ultimo .eindex__rel{font-family:var(--f-mono);font-size:11px;color:var(--red);letter-spacing:.04em}
+#ultimo .eindex__sep{color:var(--meta);font-size:11px}
+@media(max-width:860px){#ultimo .eindex{grid-template-columns:1fr}#ultimo .eindex__row--feat{grid-template-columns:clamp(124px,30vw,168px) 1fr}#ultimo .eindex__row--feat .eindex__media{min-height:120px}}
+@media(max-width:520px){#ultimo .eindex__row,#ultimo .eindex__row--feat{grid-template-columns:92px 1fr}#ultimo .eindex__media,#ultimo .eindex__row--feat .eindex__media{min-height:92px}}
+/* Banner de servicio — movimiento sutil */
+.feedad__sheen{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;border-radius:inherit}
+.feedad__sheen::after{content:"";position:absolute;top:-60%;left:-40%;width:34%;height:220%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-16deg);animation:feedadSheen 6s var(--ease-io) infinite}
+.feedad__orb{position:absolute;z-index:0;width:340px;height:340px;border-radius:50%;right:-90px;top:-130px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 65%);pointer-events:none;animation:feedadFloat 9s ease-in-out infinite}
+.feedad__cta{transition:transform .3s var(--spring),box-shadow .3s var(--spring)}
+.feedad:hover .feedad__cta{transform:translateY(-1px);box-shadow:0 12px 26px rgba(0,0,0,.18)}
+@keyframes feedadSheen{0%{left:-40%}55%,100%{left:130%}}
+@keyframes feedadFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(-16px,16px)}}
+@media(prefers-reduced-motion:reduce){.feedad__sheen::after,.feedad__orb{animation:none}}
+</style>
+<!-- SEO · datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Recursos & Blog · CREA",
+  "description": "Guías, plantillas y aprendizajes reales sobre estrategia, contenido, branding, paid media, web y posicionamiento en IA.",
+  "inLanguage": "es-AR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CREA",
+    "logo": { "@type": "ImageObject", "url": "assets/logo-color.png" }
+  },
+  "blogPost": [
+    { "@type": "BlogPosting", "headline": "Marketing para odontólogos: cómo llenar la agenda", "url": "recurso-marketing-odontologia.html", "datePublished": "2026-06-18", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Marketing para abogados y estudios jurídicos", "url": "recurso-marketing-abogados.html", "datePublished": "2026-06-17", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Marketing para restaurantes y gastronomía", "url": "recurso-marketing-gastronomia.html", "datePublished": "2026-06-16", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Marketing para inmobiliarias y agentes", "url": "recurso-marketing-inmobiliarias.html", "datePublished": "2026-06-15", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Marketing para estética y centros de belleza", "url": "recurso-marketing-estetica.html", "datePublished": "2026-06-14", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Cómo empezar a crear contenido desde cero", "url": "recurso-empezar-crear-contenido.html", "datePublished": "2026-06-13", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "¿Cuánto presupuesto necesitás para empezar con pauta?", "url": "recurso-presupuesto-pauta.html", "datePublished": "2026-06-12", "author": { "@type": "Person", "name": "Lucas Iván Rodríguez" } },
+    { "@type": "BlogPosting", "headline": "5 errores que queman tu presupuesto en Meta Ads", "url": "recurso-errores-meta-ads.html", "datePublished": "2026-06-11", "author": { "@type": "Person", "name": "Lucas Iván Rodríguez" } },
+    { "@type": "BlogPosting", "headline": "El embudo de pauta: TOFU, MOFU y BOFU explicado simple", "url": "recurso-embudo-pauta-tofu-mofu-bofu.html", "datePublished": "2026-06-10", "author": { "@type": "Person", "name": "Lucas Iván Rodríguez" } },
+    { "@type": "BlogPosting", "headline": "Automatizaciones de WhatsApp: no pierdas un cliente más", "url": "recurso-automatizaciones-whatsapp.html", "datePublished": "2026-06-09", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Posicionamiento en IA (GEO): cómo lograr que ChatGPT y Gemini recomienden tu marca", "url": "recurso-posicionamiento-ia-geo.html", "datePublished": "2026-05-28", "author": { "@type": "Person", "name": "Elías Alexander" } },
+    { "@type": "BlogPosting", "headline": "Calendario de contenido: la plantilla de 30 días que usamos en CREA", "url": "recurso-calendario-contenido.html", "datePublished": "2026-05-12", "author": { "@type": "Person", "name": "Elías Alexander" } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ════════ INTRO CINEMÁTICA · EL PODER DE VERSE BIEN ════════ -->
+<div class="crea-intro" id="creaIntro" aria-hidden="true">
+  <div class="crea-intro__aurora"></div>
+  <div class="crea-intro__grain"></div>
+  <div class="crea-intro__inner">
+    <span class="crea-intro__logo-wrap"><img class="crea-intro__logo" src="assets/logo-color.png" alt="CREA" width="820" height="240"></span>
+    <div class="crea-intro__line"></div>
+    <div class="crea-intro__tag"><span class="crea-intro__star">✦</span>El poder de verse bien</div>
+  </div>
+  <button class="crea-intro__skip" type="button">Saltar intro</button>
+</div>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CREA Recursos">
+    <rect width="100" height="100" rx="22" fill="#1B2F6E"></rect>
+    <rect x="26" y="30" width="48" height="6" rx="3" fill="#F6F4F0"></rect>
+    <rect x="26" y="44" width="38" height="4" rx="2" fill="#4D7FE8"></rect>
+    <rect x="26" y="54" width="44" height="4" rx="2" fill="#4D7FE8"></rect>
+    <rect x="26" y="64" width="30" height="4" rx="2" fill="#CC2233"></rect>
+  </svg>
+</template>
+
+<div class="progress" id="progress"></div>
+
+<!-- ════════ NAV ════════ -->
+<header class="nav scrolled" id="nav">
+  <a href="index.html" aria-label="CREA">
+    <img class="nav__logo nav__logo--light" src="assets/logo-white.png" alt="CREA">
+    <img class="nav__logo nav__logo--dark" src="assets/logo-color.png" alt="CREA">
+  </a>
+  <nav class="nav__right">
+    <a class="nav__link nav__links-inline" href="index.html#servicios">Servicios</a>
+    <a class="nav__link nav__links-inline" href="index.html#combos">Combos</a>
+    <a class="nav__link nav__links-inline" href="index.html#casos">Casos</a>
+    <a class="nav__link nav__links-inline" href="Recursos.html" aria-current="page" style="color:var(--navy);font-weight:600;">Recursos</a>
+    <a class="nav__cta btn btn--ghost-light nav__links-inline" href="index.html#contacto">Reservá tu sesión</a>
+    <button class="nav__burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<nav class="mnav" id="mnav">
+  <a href="index.html#servicios">Servicios</a>
+  <a href="index.html#combos">Combos</a>
+  <a href="index.html#casos">Casos</a>
+  <a href="Recursos.html">Recursos</a>
+  <a href="index.html">← Volver a la web</a>
+  <a class="btn btn--wa btn--lg" href="https://wa.me/5491139261873?text=Hola%20CREA%2C%20quiero%20reservar%20una%20Sesi%C3%B3n%20Estrat%C3%A9gica" target="_blank" rel="noopener">Reservá tu sesión →</a>
+</nav>
+
+<!-- ════════ COVER STORY (hero = portada de medio) ════════ -->
+<section class="rhero ecover" id="top">
+  <div class="rhero__bg" aria-hidden="true">
+    <video class="crea-video rhero__video" src="assets/video/hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/editorial/papers.webp"></video>
+    <div class="aurora"></div>
+    <div class="rhero__grid"></div>
+    <div class="rhero__orb rhero__orb--1"></div>
+    <div class="rhero__orb rhero__orb--2"></div>
+    <div class="crea-veil"></div>
+  </div>
+  <div class="wrap rhero__inner">
+
+    <!-- masthead de publicación -->
+    <div class="emast">
+      <span class="emast__name">Recursos<b>.</b></span>
+      <span class="emast__by">El blog de CREA</span>
+      <span class="emast__meta">
+        <span class="emast__live"><span class="emast__dotlive"></span>Actualizado cada semana</span>
+        <span>·</span>
+        <time id="mastDate">Sábado, 20 de junio 2026</time>
+      </span>
+    </div>
+
+    <div class="ecover__grid" id="cover">
+      <div class="ecover__lead">
+        <span class="ecover__kicker" id="covKicker"><b>Historia de tapa</b> · IA & GEO</span>
+        <h1 class="rhero__title ecover__title" id="covTitle">Que <span class="ac">ChatGPT</span> recomiende tu marca</h1>
+        <p class="ecover__deck" id="covDeck">El SEO clásico ya no alcanza. Cada vez más gente le pregunta a una IA “¿qué agencia me conviene?” en lugar de googlear. Te explicamos qué es el GEO y cómo empezar a aparecer en esas respuestas — el diferencial real de 2026.</p>
+        <div class="ecover__byline" id="covByline">
+          <img class="avatar avatar--lg" src="assets/elias-plano-medio.png" alt="Elías Alexander">
+          <span class="ecover__who"><b>Elías Alexander</b><span>Estrategia & IA</span></span>
+          <span class="bdot"></span>
+          <span class="bmeta">28 May 2026</span>
+          <span class="bdot"></span>
+          <span class="bmeta">9 min de lectura</span>
+        </div>
+        <div class="ecover__actions">
+          <a class="btn btn--light" id="covLink" href="recurso-posicionamiento-ia-geo.html">Leer la guía <span class="arrow">→</span></a>
+          <span class="ecover__read" id="covRead">Guía · Nivel intermedio</span>
+        </div>
+        <div class="ecover__nav" id="covDots" role="tablist" aria-label="Destacados"></div>
+      </div>
+
+      <a class="ecover__media" id="covMedia" href="recurso-posicionamiento-ia-geo.html" aria-label="Leer la historia de tapa">
+        <span class="ecover__tag" id="covTag">Nuevo · 2026</span>
+        <div class="ph">
+          <div class="ph__in">
+            <span class="ph__ic" id="covIc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><circle cx="8.5" cy="9.5" r="1.6"></circle><path d="M21 16l-5-5L5 20"></path></svg></span>
+            <span class="ph__lab" id="covPhLab">Imagen de tapa<br><b>1600 × 1200 · GEO / IA</b></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ MARQUEE DE TEMAS ════════ -->
+<div class="etopics" aria-hidden="true">
+  <div class="etopics__row">
+    <span class="etopics__item">Estrategia <span class="star">✦</span></span>
+    <span class="etopics__item">Contenido <span class="star">✦</span></span>
+    <span class="etopics__item">Branding <span class="star">✦</span></span>
+    <span class="etopics__item">Paid Media <span class="star">✦</span></span>
+    <span class="etopics__item">Web & SEO <span class="star">✦</span></span>
+    <span class="etopics__item">IA & GEO <span class="star">✦</span></span>
+    <span class="etopics__item">Automatizaciones <span class="star">✦</span></span>
+    <span class="etopics__item">Guías por rubro <span class="star">✦</span></span>
+    <span class="etopics__item">Plantillas <span class="star">✦</span></span>
+    <span class="etopics__item">Casos reales <span class="star">✦</span></span>
+    <span class="etopics__item">Estrategia <span class="star">✦</span></span>
+    <span class="etopics__item">Contenido <span class="star">✦</span></span>
+    <span class="etopics__item">Branding <span class="star">✦</span></span>
+    <span class="etopics__item">Paid Media <span class="star">✦</span></span>
+    <span class="etopics__item">Web & SEO <span class="star">✦</span></span>
+    <span class="etopics__item">IA & GEO <span class="star">✦</span></span>
+    <span class="etopics__item">Automatizaciones <span class="star">✦</span></span>
+    <span class="etopics__item">Guías por rubro <span class="star">✦</span></span>
+    <span class="etopics__item">Plantillas <span class="star">✦</span></span>
+    <span class="etopics__item">Casos reales <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- ════════ CATEGORÍAS (sticky) ════════ -->
+<div class="rcats">
+  <div class="wrap rcats__wrap">
+    <button class="rcat on" data-filter="all">Todo</button>
+    <button class="rcat" data-filter="estrategia">Estrategia</button>
+    <button class="rcat" data-filter="rubros">Rubros</button>
+    <button class="rcat" data-filter="contenido">Contenido</button>
+    <button class="rcat" data-filter="branding">Branding</button>
+    <button class="rcat" data-filter="paid">Paid Media</button>
+    <button class="rcat" data-filter="web">Web & SEO</button>
+    <button class="rcat" data-filter="ia">IA & GEO</button>
+  </div>
+</div>
+
+<!-- ════════ LO ÚLTIMO (índice cronológico) ════════ -->
+<section class="esec esec--tint" id="ultimo">
+  <div class="wrap">
+    <div class="esec__head">
+      <div>
+        <span class="esec__lab">Lo último</span>
+        <h2 class="esec__title">Recién <span class="ac">publicado</span></h2>
+        <p class="esec__sub">Lo nuevo del sistema. Las últimas notas que sumamos — con su tapa, listas para leer.</p>
+      </div>
+      <a class="esec__link" href="#explorar">Ver todo el archivo <span class="arrow">→</span></a>
+    </div>
+
+    <div class="eindex stagger">
+      <a class="eindex__row eindex__row--feat" href="recurso-ia-sin-trabajo.html">
+        <div class="eindex__media"><img src="assets/recursos/ia-sin-trabajo.png" alt="¿La IA nos va a dejar sin trabajo?" loading="lazy"><span class="eindex__cat">IA & GEO</span></div>
+        <div class="eindex__main">
+          <h3 class="eindex__title">¿La IA nos va a dejar sin trabajo?</h3>
+          <p class="eindex__excerpt">La pregunta del año, sin humo ni catástrofe. Qué reemplaza la IA, qué se vuelve más valioso y qué hacer al respecto si vivís de crear o de tu marca.</p>
+          <div class="eindex__who"><span class="eindex__n">Por Elías Alexander</span><span class="eindex__sep">·</span><span class="eindex__n">8 min</span><span class="eindex__sep">·</span><time class="eindex__rel" data-date="2026-06-20">Reciente</time></div>
+        </div>
+        <span class="eindex__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="eindex__row" href="recurso-cliente-se-fue-ia.html">
+        <div class="eindex__media"><img src="assets/recursos/cliente-se-fue-ia.png" alt="Un cliente nos dejó porque lo hace con IA" loading="lazy"><span class="eindex__cat">Estrategia</span></div>
+        <div class="eindex__main">
+          <h3 class="eindex__title">Un cliente nos dejó porque “lo hace con IA”</h3>
+          <p class="eindex__excerpt">Nos dijo que ya no nos necesitaba. Tres meses después volvió — esto es lo que pasó en el medio.</p>
+          <div class="eindex__who"><span class="eindex__n">Elías Alexander</span><span class="eindex__sep">·</span><time class="eindex__rel" data-date="2026-06-19">Reciente</time></div>
+        </div>
+      </a>
+
+      <a class="eindex__row" href="recurso-emprender-con-ia.html">
+        <div class="eindex__media"><img src="assets/recursos/emprender-con-ia.png" alt="10 ideas para emprender con IA" loading="lazy"><span class="eindex__cat">IA & GEO</span></div>
+        <div class="eindex__main">
+          <h3 class="eindex__title">10 ideas para emprender con IA en 2026</h3>
+          <p class="eindex__excerpt">Diez negocios que hoy se pueden montar con herramientas de IA y poco capital. Sin saber programar.</p>
+          <div class="eindex__who"><span class="eindex__n">Lucas Iván Rodríguez</span><span class="eindex__sep">·</span><time class="eindex__rel" data-date="2026-06-19">Reciente</time></div>
+        </div>
+      </a>
+
+      <a class="eindex__row" href="recurso-emprender-poco-presupuesto.html">
+        <div class="eindex__media"><img src="assets/recursos/emprender-poco-presupuesto.png" alt="Emprender con poco presupuesto" loading="lazy"><span class="eindex__cat">Estrategia</span></div>
+        <div class="eindex__main">
+          <h3 class="eindex__title">Emprender con poco presupuesto: 12 movimientos</h3>
+          <p class="eindex__excerpt">No necesitás plata para empezar. Necesitás foco. Doce movimientos para arrancar con lo mínimo y crecer con criterio.</p>
+          <div class="eindex__who"><span class="eindex__n">Lucas Iván Rodríguez</span><span class="eindex__sep">·</span><time class="eindex__rel" data-date="2026-06-18">Reciente</time></div>
+        </div>
+      </a>
+
+      <a class="eindex__row" href="recurso-por-que-necesitas-web.html">
+        <div class="eindex__media"><img src="assets/recursos/diseno-web.png" alt="¿Por qué tu negocio necesita una web?" loading="lazy"><span class="eindex__cat">Web & SEO</span></div>
+        <div class="eindex__main">
+          <h3 class="eindex__title">¿Por qué tu negocio necesita una web (y no solo Instagram)?</h3>
+          <p class="eindex__excerpt">Tener solo redes es alquilar tu audiencia en terreno ajeno. Por qué una web propia sigue siendo la base de un negocio serio.</p>
+          <div class="eindex__who"><span class="eindex__n">Elías Alexander</span><span class="eindex__sep">·</span><time class="eindex__rel" data-date="2026-06-17">Reciente</time></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ARCHIVO / GRILLA ════════ -->
+<section class="esec" id="explorar">
+  <div class="wrap">
+    <div class="esec__head">
+      <div>
+        <span class="esec__lab">El archivo</span>
+        <h2 class="esec__title">Explorá <span class="ac">todo</span></h2>
+        <p class="esec__sub"><b class="count-up" data-count="41">41</b> guías y plantillas para aplicar hoy. Filtrá por lo que necesitás resolver.</p>
+      </div>
+      <div class="gridsearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input type="search" id="gridSearch" placeholder="Buscar en el archivo…" aria-label="Buscar notas">
+      </div>
+    </div>
+
+    <div class="posts stagger">
+
+      <!-- 20 jun · IA y trabajo -->
+      <a class="post post--lead" data-cat="ia" href="recurso-ia-sin-trabajo.html">
+        <div class="post__media">
+          <span class="post__tag">IA & GEO</span><span class="post__type">Opinión</span>
+          <img src="assets/recursos/ia-sin-trabajo.png" alt="¿La IA nos va a dejar sin trabajo?" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">¿La IA nos va a dejar sin trabajo?</h3>
+          <p class="post__excerpt">La pregunta del año, sin humo: qué reemplaza la IA, qué se vuelve más valioso y qué hacer al respecto.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>20 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 19 jun · cliente + IA -->
+      <a class="post" data-cat="estrategia" href="recurso-cliente-se-fue-ia.html">
+        <div class="post__media">
+          <span class="post__tag">Estrategia</span><span class="post__type">Detrás de escena</span>
+          <img src="assets/recursos/cliente-se-fue-ia.png" alt="Un cliente nos dejó porque “lo hace con IA”. Qué aprendimos." loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Un cliente nos dejó porque “lo hace con IA”. Qué aprendimos.</h3>
+          <p class="post__excerpt">Nos dijo “ahora lo hago con ChatGPT”. Tres meses después volvió. Qué pasó en el medio.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>19 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 19 jun · emprender con IA -->
+      <a class="post" data-cat="ia" href="recurso-emprender-con-ia.html">
+        <div class="post__media">
+          <span class="post__tag">IA & GEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/emprender-con-ia.png" alt="10 ideas para emprender con IA en 2026" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">10 ideas para emprender con IA en 2026</h3>
+          <p class="post__excerpt">Diez negocios que hoy se pueden montar con herramientas de IA y poco capital. Sin saber programar.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>19 jun</time><span class="dot">·</span><span>9 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 18 jun · poco presupuesto -->
+      <a class="post" data-cat="estrategia" href="recurso-emprender-poco-presupuesto.html">
+        <div class="post__media">
+          <span class="post__tag">Estrategia</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/emprender-poco-presupuesto.png" alt="Emprender con poco presupuesto: 12 movimientos" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Emprender con poco presupuesto: 12 movimientos</h3>
+          <p class="post__excerpt">No necesitás plata para empezar: necesitás foco. Doce movimientos para arrancar con lo mínimo.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>18 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 18 jun · idea a venta -->
+      <a class="post" data-cat="estrategia" href="recurso-idea-no-se-venderla.html">
+        <div class="post__media">
+          <span class="post__tag">Estrategia</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/idea-no-se-venderla.png" alt="Tengo una idea y no sé cómo venderla" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Tengo una idea y no sé cómo venderla</h3>
+          <p class="post__excerpt">El problema casi nunca es la idea: es que no la sabés contar. La guía para que se entienda y compre.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>18 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 17 jun · por qué una web -->
+      <a class="post" data-cat="web" href="recurso-por-que-necesitas-web.html">
+        <div class="post__media">
+          <span class="post__tag">Web & SEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/diseno-web.png" alt="¿Por qué tu negocio necesita una web (y no solo Instagram)?" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">¿Por qué tu negocio necesita una web (y no solo Instagram)?</h3>
+          <p class="post__excerpt">Tener solo redes es alquilar tu audiencia en terreno ajeno. Por qué la web propia sigue siendo la base.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>17 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 16 jun · automatizaciones -->
+      <a class="post" data-cat="web" href="recurso-automatizaciones-negocio.html">
+        <div class="post__media">
+          <span class="post__tag">Web & SEO</span><span class="post__type">Automatización</span>
+          <img src="assets/recursos/automatizaciones-negocio.png" alt="Automatizaciones que todo negocio debería tener" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Automatizaciones que todo negocio debería tener</h3>
+          <p class="post__excerpt">Las automatizaciones simples que le devuelven horas (y clientes) a cualquier negocio chico.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>16 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- ░░ house ad · servicio: Community Manager ░░ -->
+      <a class="feedad feedad--red" data-feedad href="index.html#servicios" aria-label="Conocé el servicio de Community Manager de CREA">
+        <span class="feedad__orb" aria-hidden="true"></span>
+        <span class="feedad__sheen" aria-hidden="true"></span>
+        <div class="feedad__in">
+          <div class="feedad__txt">
+            <span class="feedad__lab">Servicio CREA · Contenido</span>
+            <h3 class="feedad__title">Tu marca presente todos los días, sin que lo pienses</h3>
+            <p class="feedad__sub">Feed, historias, copy y calendario gestionados por un equipo. Vos atendés tu negocio; nosotros, tu contenido.</p>
+          </div>
+          <span class="feedad__cta btn btn--light">Ver Community Manager <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 15 jun · gimnasios -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-gimnasios.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-gimnasios.png" alt="Marketing para gimnasios y entrenadores" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para gimnasios y entrenadores</h3>
+          <p class="post__excerpt">Atraer socios es la mitad; retenerlos es la otra. El sistema que llena (y mantiene llena) la sala.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>15 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 14 jun · psicólogos -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-psicologos.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-psicologos.png" alt="Marketing para psicólogos y consultorios" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para psicólogos y consultorios</h3>
+          <p class="post__excerpt">Un rubro donde la confianza lo es todo. Cómo construir agenda con valor y respeto por la profesión.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>14 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 13 jun · e-commerce -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-ecommerce.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-ecommerce.png" alt="Marketing para e-commerce y tiendas online" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para e-commerce y tiendas online</h3>
+          <p class="post__excerpt">Subir productos es el 10%. El sistema que conecta tráfico, conversión y recompra para vender con rentabilidad.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>13 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 18 jun -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-odontologia.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-odontologia.png" alt="Marketing para odontólogos: cómo llenar la agenda" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para odontólogos: cómo llenar la agenda</h3>
+          <p class="post__excerpt">Cómo pensamos el crecimiento de un consultorio dental: contenido, web, automatización y pauta conectados.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>18 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 17 jun -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-abogados.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-abogados.png" alt="Marketing para abogados y estudios jurídicos" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para abogados y estudios jurídicos</h3>
+          <p class="post__excerpt">Autoridad, una web que genera consultas y un sistema que conecta contenido, SEO y pauta.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>17 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 16 jun -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-gastronomia.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-gastronomia.png" alt="Marketing para restaurantes y gastronomía" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para restaurantes y gastronomía</h3>
+          <p class="post__excerpt">Un sistema que conecta contenido que da hambre, reservas, delivery y pauta. No solo fotos lindas.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>16 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 15 jun -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-inmobiliarias.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-inmobiliarias.png" alt="Marketing para inmobiliarias y agentes" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para inmobiliarias y agentes</h3>
+          <p class="post__excerpt">Cómo conectar contenido, web, portales y pauta para captar propiedades y vender más.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>15 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 14 jun -->
+      <a class="post" data-cat="rubros" href="recurso-marketing-estetica.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-estetica.png" alt="Marketing para estética y centros de belleza" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para estética y centros de belleza</h3>
+          <p class="post__excerpt">Un sistema que conecta contenido, turnos automáticos, fidelización y pauta para llenar la agenda.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>14 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 13 jun -->
+      <a class="post post--lead" data-cat="contenido" href="recurso-empezar-crear-contenido.html">
+        <div class="post__media">
+          <span class="post__tag">Contenido</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/empezar-crear-contenido.png" alt="Cómo empezar a crear contenido desde cero" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Cómo empezar a crear contenido desde cero</h3>
+          <p class="post__excerpt">La guía paso a paso para pasar de cero a una marca presente, sin perfeccionismo ni excusas.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>13 jun</time><span class="dot">·</span><span>9 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 12 jun -->
+      <a class="post" data-cat="paid" href="recurso-presupuesto-pauta.html">
+        <div class="post__media">
+          <span class="post__tag">Paid Media</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/presupuesto-pauta.png" alt="¿Cuánto presupuesto necesitás para empezar con pauta?" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">¿Cuánto presupuesto necesitás para empezar con pauta?</h3>
+          <p class="post__excerpt">La respuesta honesta de cuánto invertir en Meta y Google para que la pauta tenga sentido.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>12 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 11 jun -->
+      <a class="post" data-cat="paid" href="recurso-errores-meta-ads.html">
+        <div class="post__media">
+          <span class="post__tag">Paid Media</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/errores-meta-ads.png" alt="5 errores que queman tu presupuesto en Meta Ads" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">5 errores que queman tu presupuesto en Meta Ads</h3>
+          <p class="post__excerpt">Si tu pauta no rinde, casi siempre es por uno de estos cinco errores. Cómo evitarlos.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>11 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 10 jun -->
+      <a class="post" data-cat="paid" href="recurso-embudo-pauta-tofu-mofu-bofu.html">
+        <div class="post__media">
+          <span class="post__tag">Paid Media</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/pauta-tofu-mofu-bofu.png" alt="El embudo de pauta: TOFU, MOFU y BOFU explicado simple" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">El embudo de pauta: TOFU, MOFU y BOFU explicado simple</h3>
+          <p class="post__excerpt">Por qué pedir “comprá ya” a quien recién te conoce no funciona, y cómo armar un embudo que vende.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>10 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- ░░ house ad · sistema: Combos ░░ -->
+      <a class="feedad feedad--navy" data-feedad href="index.html#combos" aria-label="Conocé los Combos de CREA">
+        <div class="feedad__bg" aria-hidden="true"><div class="aurora"></div><div class="feedad__grid"></div></div>
+        <div class="feedad__in">
+          <div class="feedad__txt">
+            <span class="feedad__lab">El sistema CREA · Combos</span>
+            <h3 class="feedad__title">Dejá de coordinar tres proveedores. <span class="ac">Somos uno.</span></h3>
+            <p class="feedad__sub">Contenido + pauta + marca + web bajo una sola dirección y un solo reporte. El sistema completo, pensado para crecer.</p>
+          </div>
+          <span class="feedad__cta btn btn--light">Ver los Combos <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 09 jun -->
+      <a class="post" data-cat="web" href="recurso-automatizaciones-whatsapp.html">
+        <div class="post__media">
+          <span class="post__tag">Web & SEO</span><span class="post__type">Automatización</span>
+          <img src="assets/recursos/automatizaciones-whatsapp.png" alt="Automatizaciones de WhatsApp: no pierdas un cliente más" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Automatizaciones de WhatsApp: no pierdas un cliente más</h3>
+          <p class="post__excerpt">El 80% de las consultas llegan cuando no podés responder. Cómo automatizar para captar y agendar solo.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>9 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 05 jun -->
+      <a class="post" data-cat="branding" href="recurso-branding-no-es-tu-logo.html">
+        <div class="post__media">
+          <span class="post__tag">Branding</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/branding-capas.png" alt="Branding no es tu logo: las 5 capas de una marca que vende" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Branding no es tu logo: las 5 capas de una marca que vende</h3>
+          <p class="post__excerpt">Por qué un logo lindo no alcanza, y qué construye realmente la percepción de valor de tu negocio.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>5 jun</time><span class="dot">·</span><span>6 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 03 jun -->
+      <a class="post" data-cat="paid" href="recurso-meta-vs-google-ads.html">
+        <div class="post__media">
+          <span class="post__tag">Paid Media</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/meta-google.png" alt="Meta Ads vs Google Ads: cuál conviene según tu negocio" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Meta Ads vs Google Ads: cuál conviene según tu negocio</h3>
+          <p class="post__excerpt">Demanda existente vs demanda a crear. Cuándo elegir cada plataforma — y cuándo combinarlas.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>3 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 01 jun -->
+      <a class="post" data-cat="web" href="recurso-web-no-vende.html">
+        <div class="post__media">
+          <span class="post__tag">Web & SEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/web-audit.png" alt="Tu web no vende: 7 razones (y cómo arreglarlas)" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Tu web no vende: 7 razones (y cómo arreglarlas)</h3>
+          <p class="post__excerpt">El 90% de las webs pierden al cliente en los primeros 5 segundos. La checklist para que la tuya convierta.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>1 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 28 may · GEO (también tapa) -->
+      <a class="post post--lead" data-cat="ia" href="recurso-posicionamiento-ia-geo.html">
+        <div class="post__media">
+          <span class="post__tag">IA & GEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/geo-ia.png" alt="Posicionamiento en IA: que ChatGPT y Gemini recomienden tu marca" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Posicionamiento en IA: que ChatGPT y Gemini recomienden tu marca</h3>
+          <p class="post__excerpt">Qué es el GEO, por qué importa más que nunca y los primeros pasos concretos para aparecer en las respuestas de la IA.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>28 may</time><span class="dot">·</span><span>9 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 12 may -->
+      <a class="post" data-cat="contenido" href="recurso-calendario-contenido.html">
+        <div class="post__media">
+          <span class="post__tag">Contenido</span><span class="post__type">Guía + plantilla</span>
+          <img src="assets/recursos/calendario.png" alt="Calendario de contenido: la plantilla de 30 días que usamos en CREA" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Calendario de contenido: la plantilla de 30 días que usamos en CREA</h3>
+          <p class="post__excerpt">Dejá de publicar cuando te acordás. La estructura exacta que arma un mes entero de feed e historias con criterio.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>12 may</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- 08 may -->
+      <a class="post" data-cat="estrategia" href="recurso-cuanto-cuesta-marca.html">
+        <div class="post__media">
+          <span class="post__tag">Estrategia</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/costo-marca.png" alt="¿Cuánto cuesta tener una marca profesional en 2026?" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">¿Cuánto cuesta tener una marca profesional en 2026?</h3>
+          <p class="post__excerpt">Lo que de verdad pagás cuando contratás piezas sueltas — y por qué un sistema sale más barato a la larga.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>8 may</time><span class="dot">·</span><span>6 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+
+      <a class="post" data-cat="ia" href="recurso-ia-crear-contenido-sin-perder-voz.html">
+        <div class="post__media">
+          <span class="post__tag">IA & GEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/ia-crear-contenido-sin-perder-voz.png" alt="Crear contenido con IA sin perder tu voz" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Crear contenido con IA sin perder tu voz</h3>
+          <p class="post__excerpt">La IA te da velocidad; usada mal, todo suena igual. Cómo producir más rápido sin perder tu identidad.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>12 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="ia" href="recurso-chatgpt-para-negocios.html">
+        <div class="post__media">
+          <span class="post__tag">IA & GEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/chatgpt-para-negocios.png" alt="ChatGPT para dueños de negocio: 7 usos reales" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">ChatGPT para dueños de negocio: 7 usos reales</h3>
+          <p class="post__excerpt">Más allá de "escribime un posteo": siete formas concretas de ahorrar horas cada semana.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>11 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="ia" href="recurso-agentes-ia-negocio.html">
+        <div class="post__media">
+          <span class="post__tag">IA & GEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/agentes-ia-negocio.png" alt="Agentes de IA: qué son y para qué sirven" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Agentes de IA: qué son y para qué sirven</h3>
+          <p class="post__excerpt">El paso siguiente a ChatGPT: no solo responde, hace. Qué puede hacer dentro de tu negocio.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>10 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="rubros" href="recurso-marketing-contadores.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-contadores.png" alt="Marketing para contadores y estudios contables" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para contadores y estudios contables</h3>
+          <p class="post__excerpt">Dejá de depender solo del boca a boca: un sistema que atrae clientes con autoridad.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>9 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="rubros" href="recurso-marketing-arquitectos.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-arquitectos.png" alt="Marketing para arquitectos y estudios de diseño" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para arquitectos y estudios de diseño</h3>
+          <p class="post__excerpt">Tu trabajo entra por los ojos. Cómo mostrarlo para atraer al cliente que paga el buen diseño.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>8 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="rubros" href="recurso-marketing-veterinarias.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-veterinarias.png" alt="Marketing para veterinarias y pet shops" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para veterinarias y pet shops</h3>
+          <p class="post__excerpt">Un rubro emocional y de cercanía. Cómo construir comunidad y llenar la agenda con confianza.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>7 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="branding" href="recurso-marca-personal.html">
+        <div class="post__media">
+          <span class="post__tag">Branding</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/marca-personal.png" alt="Cómo construir una marca personal que atraiga clientes" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Cómo construir una marca personal que atraiga clientes</h3>
+          <p class="post__excerpt">La gente le compra a personas. Cómo generar autoridad y confianza sin volverte influencer.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>6 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post post--lead" data-cat="contenido" href="recurso-storytelling-marcas.html">
+        <div class="post__media">
+          <span class="post__tag">Contenido</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/storytelling-marcas.png" alt="Storytelling: cómo contar la historia de tu marca" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Storytelling: cómo contar la historia de tu marca</h3>
+          <p class="post__excerpt">Los datos informan, las historias venden. La estructura para que conecten y te elijan.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>5 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="contenido" href="recurso-que-publicar-sin-ideas.html">
+        <div class="post__media">
+          <span class="post__tag">Contenido</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/que-publicar-sin-ideas.png" alt="Qué publicar cuando sentís que no pasa nada" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Qué publicar cuando sentís que no pasa nada</h3>
+          <p class="post__excerpt">"Mi negocio es aburrido." Diez ángulos que cualquier negocio tiene para no quedarse sin contenido.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>4 jun</time><span class="dot">·</span><span>6 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <!-- ░░ house ad · cierre: Sesión Estratégica ░░ -->
+      <a class="feedad feedad--paper" data-feedad href="https://wa.me/5491139261873?text=Hola%20CREA%2C%20le%C3%AD%20el%20blog%20y%20quiero%20una%20Sesi%C3%B3n%20Estrat%C3%A9gica" target="_blank" rel="noopener" aria-label="Reservá tu Sesión Estratégica por WhatsApp">
+        <div class="feedad__in">
+          <div class="feedad__txt">
+            <span class="feedad__lab">Hablemos · Sesión Estratégica</span>
+            <h3 class="feedad__title">Leíste suficiente. ¿Lo armamos juntos?</h3>
+            <p class="feedad__sub">30 minutos para revisar tu marca y salir con un plan claro. Sin compromiso.</p>
+          </div>
+          <span class="feedad__cta btn btn--wa">Reservá tu sesión <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="post" data-cat="estrategia" href="recurso-metricas-que-importan.html">
+        <div class="post__media">
+          <span class="post__tag">Estrategia</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/metricas-que-importan.png" alt="Cómo saber si tu marketing funciona" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Cómo saber si tu marketing funciona</h3>
+          <p class="post__excerpt">Likes y seguidores no pagan las cuentas. Las métricas que de verdad indican si funciona.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>3 jun</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="web" href="recurso-seo-local.html">
+        <div class="post__media">
+          <span class="post__tag">Web & SEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/seo-local.png" alt="SEO local: que te encuentren cerca tuyo" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">SEO local: que te encuentren cerca tuyo</h3>
+          <p class="post__excerpt">El que aparece primero en "cerca mío" se lleva el cliente. Cómo lograr que seas vos.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>2 jun</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="web" href="recurso-resenas-google.html">
+        <div class="post__media">
+          <span class="post__tag">Web & SEO</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/resenas-google.png" alt="Reseñas de Google: cómo conseguir más" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Reseñas de Google: cómo conseguir más</h3>
+          <p class="post__excerpt">Tu prueba social más poderosa y un factor clave del mapa. Cómo conseguir más, sin rogar.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>1 jun</time><span class="dot">·</span><span>6 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="estrategia" href="recurso-como-poner-precio.html">
+        <div class="post__media">
+          <span class="post__tag">Estrategia</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/como-poner-precio.png" alt="Cómo poner el precio de lo que vendés" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Cómo poner el precio de lo que vendés</h3>
+          <p class="post__excerpt">Mirar lo que cobra el resto es el error más caro. Cómo definir un precio rentable que comunique valor.</p>
+          <div class="post__byline"><img class="avatar" src="assets/lucas-plano-medio.png" alt="Lucas Iván Rodríguez" loading="lazy"><span class="post__author">Lucas R.</span><span class="dot">·</span><time>31 may</time><span class="dot">·</span><span>8 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="rubros" href="recurso-marketing-turismo.html">
+        <div class="post__media">
+          <span class="post__tag">Rubros</span><span class="post__type">Guía por rubro</span>
+          <img src="assets/recursos/marketing-turismo.png" alt="Marketing para turismo y hotelería" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">Marketing para turismo y hotelería</h3>
+          <p class="post__excerpt">Se vende con emoción e imágenes. Cómo llenar temporadas y ganar reservas directas.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>30 may</time><span class="dot">·</span><span>7 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+      <a class="post" data-cat="contenido" href="recurso-frecuencia-publicar.html">
+        <div class="post__media">
+          <span class="post__tag">Contenido</span><span class="post__type">Guía</span>
+          <img src="assets/recursos/frecuencia-publicar.png" alt="¿Cada cuánto hay que publicar?" loading="lazy" width="800" height="500">
+        </div>
+        <div class="post__body">
+          <h3 class="post__title">¿Cada cuánto hay que publicar?</h3>
+          <p class="post__excerpt">No hay número mágico. Cómo definir el ritmo que tu negocio puede sostener y que de verdad sirve.</p>
+          <div class="post__byline"><img class="avatar" src="assets/elias-plano-medio.png" alt="Elías"><span class="post__author">Elías A.</span><span class="dot">·</span><time>29 may</time><span class="dot">·</span><span>6 min</span><span class="post__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div>
+        </div>
+      </a>
+
+    </div>
+    <p class="posts-empty">No hay artículos en esta categoría todavía. Sumate al newsletter y te avisamos.</p>
+  </div>
+</section>
+
+<!-- ════════ RECURSOS GRATUITOS ════════ -->
+<section class="esec esec--tint free" id="gratis">
+  <div class="wrap">
+    <div class="esec__head">
+      <div>
+        <span class="esec__lab">Descargas</span>
+        <h2 class="esec__title">Recursos <span class="ac">gratuitos</span></h2>
+        <p class="esec__sub">Las plantillas, checklists y calculadoras que usamos en CREA. Dejanos tu mail abajo y te las enviamos — gratis, sin vueltas.</p>
+      </div>
+      <a class="esec__link" href="#newsletter">Recibir las descargas <span class="arrow">→</span></a>
+    </div>
+
+    <div class="free__grid stagger">
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="17" rx="2.5"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg></span><span class="fres__type">Plantilla</span></div>
+        <h3 class="fres__title">Calendario de contenido · 30 días</h3>
+        <p class="fres__desc">La grilla editable que arma un mes entero de feed e historias con criterio.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M8 12l2.5 2.5L16 9"></path></svg></span><span class="fres__type">Checklist</span></div>
+        <h3 class="fres__title">¿Tu web convierte? · 23 puntos</h3>
+        <p class="fres__desc">La lista exacta para auditar tu web y encontrar dónde estás perdiendo clientes.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="2" width="16" height="20" rx="2.5"></rect><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2"></path></svg></span><span class="fres__type">Calculadora</span></div>
+        <h3 class="fres__title">Presupuesto de pauta</h3>
+        <p class="fres__desc">Cuánto invertir en Meta y Google según tu objetivo, sin tirar la plata.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg></span><span class="fres__type">Guía PDF</span></div>
+        <h3 class="fres__title">50 ideas de contenido por rubro</h3>
+        <p class="fres__desc">Para que nunca más te quedes sin saber qué publicar. Adaptables a tu marca.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M10 9l5 3-5 3z"></path></svg></span><span class="fres__type">Plantilla</span></div>
+        <h3 class="fres__title">Guion de Reels que venden</h3>
+        <p class="fres__desc">La estructura de gancho, desarrollo y cierre que retiene y convierte.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"></path><path d="M12 8l4 2.2v4.6L12 17l-4-2.2v-4.6z"></path></svg></span><span class="fres__type">Checklist</span></div>
+        <h3 class="fres__title">Las 5 capas de tu marca</h3>
+        <p class="fres__desc">Audití tu branding más allá del logo y descubrí qué te falta construir.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.6 7.1L3 21l2.4-6.4A8 8 0 1 1 21 11.5z"></path></svg></span><span class="fres__type">Plantilla</span></div>
+        <h3 class="fres__title">Respuestas automáticas de WhatsApp</h3>
+        <p class="fres__desc">Mensajes listos para no perder ninguna consulta, aunque no estés.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"></path><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"></path></svg></span><span class="fres__type">Pack IA</span></div>
+        <h3 class="fres__title">40 prompts de IA para tu negocio</h3>
+        <p class="fres__desc">Prompts probados para contenido, ideas y atención. Copiar, pegar y usar.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="m3 7 9 6 9-6"></path></svg></span><span class="fres__type">Mini-curso</span></div>
+        <h3 class="fres__title">Empezá a crear contenido</h3>
+        <p class="fres__desc">Un curso corto por email para pasar de cero a publicar con criterio.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Sumarme gratis</span>
+      </a>
+
+      <a class="fres" href="#newsletter">
+        <div class="fres__top"><span class="fres__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></span><span class="fres__type">Guía PDF</span></div>
+        <h3 class="fres__title">Auditoría express de Instagram</h3>
+        <p class="fres__desc">15 preguntas para saber si tu perfil está listo para convertir seguidores en clientes.</p>
+        <span class="fres__dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>Descargar gratis</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ YOUTUBE (reservado) ════════ -->
+<section class="eyt" id="youtube">
+  <div class="eyt__bg" aria-hidden="true"><div class="eyt__grid-l"></div><div class="aurora"></div></div>
+  <div class="wrap eyt__inner">
+    <div class="eyt__txt reveal">
+      <span class="esec__lab eyt__lab">Próximamente</span>
+      <h2 class="eyt__title">El canal de CREA<br>en <span class="ac">YouTube</span></h2>
+      <p class="eyt__sub">Lo mismo que leés acá, pero en video: estrategia, casos reales y tutoriales para aplicar. Estamos grabando los primeros episodios.</p>
+      <span class="eyt__soon"><span class="pulse"></span>Lanzamiento pronto · dejanos tu mail abajo</span>
+    </div>
+    <div class="eyt__player reveal d1">
+      <div class="ph"><div class="ph__in"><span class="ph__lab"><b>Miniatura del canal</b><br>1920 × 1080 · 16:9</span></div></div>
+      <div class="eyt__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ NEWSLETTER ════════ -->
+<section class="rnews" id="newsletter">
+  <div class="rnews__bg" aria-hidden="true"><video class="crea-video rnews__video" src="assets/video/hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/editorial/papers.webp"></video><div class="aurora"></div><div class="rnews__grid"></div><div class="rnews__orb"></div><div class="crea-veil"></div></div>
+  <div class="wrap rnews__inner">
+    <div class="rnews__col">
+      <span class="eyebrow eyebrow--light reveal">Newsletter CREA</span>
+      <h2 class="rnews__title reveal d1">Ideas que <span class="ac">venden</span>,<br>en tu inbox.</h2>
+      <p class="rnews__sub reveal d2">Una vez por semana: una idea de contenido, una tendencia y un recurso para aplicar. Cero relleno — solo lo que mueve la aguja de tu marca.</p>
+    </div>
+    <div class="rnews__col reveal d2">
+      <form class="rnews__form" id="rnewsForm">
+        <div class="rnews__field">
+          <input type="text" name="nombre" placeholder="Tu nombre" aria-label="Nombre" autocomplete="name">
+        </div>
+        <div class="rnews__field">
+          <input type="email" name="email" placeholder="tu@email.com" aria-label="Email" autocomplete="email" required>
+        </div>
+        <button class="btn btn--wa" type="submit">Sumarme al newsletter <span class="arrow">→</span></button>
+        <p class="rnews__fine">Te podés bajar cuando quieras, con un click. Sin spam.</p>
+      </form>
+      <div class="rnews__ok">
+        <h3 class="rnews__title" style="font-size:clamp(26px,3vw,40px)">¡Listo! Ya <span class="ac">estás</span>.</h3>
+        <p class="rnews__sub">Lo bueno llega cada semana. Mientras tanto, ¿hablamos de tu marca?</p>
+        <a class="btn btn--wa" href="https://wa.me/5491139261873?text=Hola%20CREA%2C%20me%20sum%C3%A9%20al%20newsletter%20y%20quiero%20hablar%20de%20mi%20marca" target="_blank" rel="noopener" style="margin-top:18px;">Hablar por WhatsApp <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ DE LA LECTURA AL SERVICIO ════════ -->
+<section class="funnel">
+  <div class="wrap">
+    <div class="funnel__head">
+      <span class="eyebrow reveal">¿Y después de leer?</span>
+      <h2 class="funnel__title reveal d1">Leer está bien.<br><span class="ac">Hacerlo</span> es mejor.</h2>
+      <p class="funnel__sub reveal d2">Estos recursos te muestran el cómo. Si preferís que un equipo lo ejecute por vos — con estrategia, dirección y un solo reporte — esto es lo que hacemos.</p>
+    </div>
+    <div class="funnel__grid stagger">
+      <a class="fcard" href="index.html#servicios">
+        <span class="fcard__n">01</span>
+        <h3 class="fcard__name">Contenido con estrategia</h3>
+        <p class="fcard__desc">Feed, historias, copy y calendario gestionados por un equipo. Tu marca presente y profesional todos los días.</p>
+        <span class="fcard__go">Ver Community Manager <span class="arrow">→</span></span>
+      </a>
+      <a class="fcard" href="index.html#servicios">
+        <span class="fcard__n">02</span>
+        <h3 class="fcard__name">Marca que comunica valor</h3>
+        <p class="fcard__desc">Identidad, sistema visual y posicionamiento. Que tu marca se vea como lo que realmente vale.</p>
+        <span class="fcard__go">Ver Branding <span class="arrow">→</span></span>
+      </a>
+      <a class="fcard" href="index.html#combos">
+        <span class="fcard__n">03</span>
+        <h3 class="fcard__name">El sistema completo</h3>
+        <p class="fcard__desc">Contenido + pauta + marca + web, bajo una sola dirección. Dejá de coordinar tres proveedores: somos uno.</p>
+        <span class="fcard__go">Ver Combos <span class="arrow">→</span></span>
+      </a>
+    </div>
+    <div class="funnel__cta reveal">
+      <a class="btn btn--wa btn--lg" href="https://wa.me/5491139261873?text=Hola%20CREA%2C%20le%C3%AD%20el%20blog%20y%20quiero%20una%20Sesi%C3%B3n%20Estrat%C3%A9gica" target="_blank" rel="noopener">Reservá tu Sesión Estratégica <span class="arrow">→</span></a>
+      <a class="btn btn--ghost" href="index.html#servicios">Ver todos los servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <video class="crea-video footer__video" src="assets/video/hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/editorial/papers.webp"></video>
+  <div class="footer__video-veil"></div>
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/logo-white.png" alt="CREA">
+        <p class="footer__tag">Estrategia, contenido e identidad para marcas con criterio. Hacemos que tu marca se vea como lo que vale.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navegá</h4>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#combos">Combos</a>
+          <a href="index.html#casos">Casos</a>
+          <a href="Recursos.html">Recursos & Blog</a>
+          <a href="CREA%20-%20Landing.html">La historia de CREA</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <a href="https://wa.me/5491139261873" target="_blank" rel="noopener">WhatsApp · 11 3926-1873</a>
+          <a href="mailto:creatucontenido.contacto@gmail.com">creatucontenido.contacto@gmail.com</a>
+          <a href="https://instagram.com/creatucontenidook" target="_blank" rel="noopener">@creatucontenidook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 CREA · Todos los derechos reservados</span><a class="footer__legal" href="Legales.html">Términos · Privacidad · Cookies</a>
+      <span>Buenos Aires, Argentina · Desde 2015</span>
+    </div>
+  </div>
+</footer>
+
+<a class="backweb" id="backweb" href="index.html">← Volver a la web</a>
+
+<script src="crea-intro.js"></script>
+<script src="recursos.js"></script>
+<script src="recursos-premium.js"></script>
+<script src="recursos-editorial.js"></script>
+<script src="recursos-archive.js"></script>
+<script src="recursos-cover.js"></script>
+<script src="web-lazyvid.js"></script>
+<script src="mailerlite.js"></script>
+</body>
+</html>

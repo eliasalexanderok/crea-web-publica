@@ -1,0 +1,143 @@
+/* ═══════════════════════════════════════════════════════════
+   CREA · RECURSOS — CAPA PREMIUM v2
+   Movimiento estilo Apple / Gemini: parallax con scroll,
+   titular que se revela palabra a palabra, acentos con
+   gradiente fluido, tilt 3D con el cursor, botones magnéticos.
+   Se apoya en tokens de web.css. No reescribe nada anterior.
+═══════════════════════════════════════════════════════════ */
+
+/* ── Luz que sigue al cursor en las secciones oscuras (Apple) ── */
+.rhero, .rnews { --cx: 70%; --cy: 0%; }
+.rhero::after, .rnews::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(420px circle at var(--cx) var(--cy),
+    rgba(120,150,255,0.16), transparent 62%);
+  opacity: 0; transition: opacity .6s var(--ease-io); mix-blend-mode: screen;
+}
+.rhero.lit::after, .rnews.lit::after { opacity: 1; }
+
+/* ── Parallax con scroll: orbes, grilla y contenido del hero ──
+   JS escribe --p (0→1) a medida que el hero sale de viewport.   */
+.rhero__orb, .rhero__grid, .rnews__orb, .rnews__grid { will-change: transform; }
+.rhero__orb--1 { transform: translate3d(0, calc(var(--p, 0) * 120px), 0); }
+.rhero__orb--2 { transform: translate3d(0, calc(var(--p, 0) * -90px), 0); }
+.rhero__grid   { transform: translate3d(0, calc(var(--p, 0) * 70px), 0); }
+.rhero__inner  { will-change: transform, opacity;
+  transform: translate3d(0, calc(var(--p, 0) * 56px), 0);
+  opacity: calc(1 - var(--p, 0) * 0.9); }
+.rnews__orb    { transform: translate3d(0, calc(var(--pn, 0) * -70px), 0); }
+
+/* ═══════ TITULAR DEL HERO: revelado palabra a palabra (Gemini) ═══════ */
+.rhero__title .word, .rnews__title .word { display: inline-block; will-change: transform, filter; }
+.rhero__title.split .word, .rnews__title.split .word {
+  opacity: 0; transform: translateY(0.5em) rotate(1.6deg); filter: blur(12px);
+}
+body.anim .rhero__title.split .word, body.anim .rnews__title.split .word {
+  transition: opacity .85s var(--spring), transform .85s var(--spring), filter .85s var(--spring);
+  transition-delay: calc(var(--i, 0) * 0.06s);
+}
+.rhero__title.split.in .word, .rnews__title.split.in .word {
+  opacity: 1; transform: none; filter: blur(0);
+}
+
+/* ═══════ ACENTOS CON GRADIENTE FLUIDO (firma Gemini) ═══════
+   Solo en secciones navy, para mantener el rojo de marca en claro. */
+.rhero__title .ac, .rnews__title .ac {
+  background: linear-gradient(100deg,
+    #6E9BFF 0%, #4D7FE8 22%, #9B7BFF 46%, #FF5A6E 68%, #6E9BFF 100%);
+  background-size: 240% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  animation: gemFlow 8s linear infinite;
+}
+@keyframes gemFlow { to { background-position: -240% 0; } }
+
+/* línea de luz fina bajo la barra de categorías (profundidad Apple) */
+.rcats { position: sticky; }
+.rcats::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(77,127,232,0.5), rgba(204,34,51,0.4), transparent);
+  opacity: 0; transition: opacity .5s var(--ease-io);
+}
+.rcats.stuck::after { opacity: 1; }
+
+/* ═══════ INDICADOR DESLIZANTE EN CATEGORÍAS (shared element) ═══════ */
+.rcats__wrap { position: relative; }
+.rcat__ind {
+  position: absolute; top: 0; left: 0; z-index: 0; border-radius: 100px;
+  background: var(--navy); box-shadow: 0 10px 26px rgba(27,47,110,0.34);
+  transform: translateX(var(--ind-x, 0)); width: var(--ind-w, 0);
+  height: var(--ind-h, 0); margin-top: var(--ind-y, 0);
+  transition: transform .5s var(--spring), width .5s var(--spring);
+  pointer-events: none;
+}
+.rcat { position: relative; z-index: 1; transition: color .35s var(--spring), border-color .35s var(--spring); }
+.rcat.on { background: transparent; border-color: transparent; box-shadow: none; color: #fff; }
+.rcat.on:hover { color: #fff; }
+
+/* ═══════ TILT 3D CON EL CURSOR (Apple) ═══════
+   La tarjeta entera se inclina hacia el cursor. Sin translateZ en
+   capas internas para no romper el clip de las esquinas redondeadas. */
+.feat__card, .post, .fcard {
+  transform:
+    perspective(1300px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))
+    translateY(var(--lift, 0px));
+  transition: transform .5s var(--spring), box-shadow .45s var(--spring), border-color .35s;
+  will-change: transform;
+}
+/* el lift al hover va por variable y el transform completo se mantiene,
+   ganándole a las reglas de hover anteriores (mismo selector, carga posterior) */
+.feat__card:hover, .post:hover, .fcard:hover {
+  --lift: -4px;
+  transform:
+    perspective(1300px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))
+    translateY(var(--lift, -4px));
+}
+
+/* brillo de borde sutil al hacer tilt sobre las tarjetas claras */
+.post::before, .fcard::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 4;
+  pointer-events: none; opacity: 0; transition: opacity .4s var(--ease-io);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7),
+              inset 0 0 0 1px rgba(77,127,232,0.16);
+}
+.post:hover::before, .fcard:hover::before { opacity: 1; }
+
+/* ═══════ BOTONES MAGNÉTICOS (Apple) ═══════ */
+.btn.magnetic { will-change: transform; }
+.btn.magnetic .btn__label { display: inline-flex; align-items: center; gap: 9px;
+  transition: transform .3s var(--spring); }
+
+/* ═══════ REVELADO DE IMÁGENES CON CORTINA (clip) ═══════ */
+.feat__media img, .post__media img {
+  clip-path: inset(0 0 0 0); transform: scale(1.06);
+}
+body.anim .post__media img { transition: transform .7s var(--ease-io), clip-path .9s var(--ease-io); }
+.post.in-img .post__media img { transform: scale(1); }
+.post:hover .post__media img { transform: scale(1.08); }
+
+/* ── micro: número de la tarjeta funnel con halo ── */
+.fcard__n { position: relative; }
+.fcard:hover .fcard__n { text-shadow: 0 0 18px rgba(204,34,51,0.45); }
+
+/* ── nav: hairline con leve glow al estar scrolled ── */
+.nav.scrolled { box-shadow: 0 1px 0 rgba(20,36,88,0.06), 0 10px 30px -18px rgba(20,36,88,0.35); }
+
+/* ── flecha “leer” con desplazamiento fluido ── */
+.post__foot .go, .feat__go { transition: gap .3s var(--spring); }
+.post:hover .post__foot .go { gap: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rhero__title .ac, .rnews__title .ac { animation: none; }
+  .rhero__orb, .rhero__grid, .rhero__inner, .rnews__orb { transform: none !important; }
+  .feat__card, .post, .fcard,
+  .feat__card:hover, .post:hover, .fcard:hover { transform: none !important; }
+  .rhero__title.split .word, .rnews__title.split .word { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+
+/* En pantallas táctiles desactivamos el tilt para evitar saltos */
+@media (hover: none) {
+  .feat__card, .post, .fcard { transform: none !important; }
+}

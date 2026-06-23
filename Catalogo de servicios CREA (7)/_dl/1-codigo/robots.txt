@@ -1,0 +1,25 @@
+# robots.txt · creatucontenido.com
+User-agent: *
+Allow: /
+
+# Bloqueamos documentos internos de producción
+Disallow: /Imagenes-faltantes.html
+Disallow: /Recursos-v1-original.html
+
+# Bienvenidos los crawlers de IA (GEO/AEO)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://creatucontenido.com.ar/sitemap.xml

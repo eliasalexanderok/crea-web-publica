@@ -1,0 +1,308 @@
+/* ═══════════════════════════════════════════════════════════
+   CREA — WEB · REFINE LAYER  (carga LA ÚLTIMA, gana siempre)
+   v3 — feedback de Elias:
+   · Combos: fuera las 4 columnas → 3 arriba + el DORADO grande abajo
+   · Arreglado el “fondo blanco con letra blanca” de la estrella
+   · Categorías: color por familia + brillo tipo Instagram en IA
+   · Testimonios: sin cajas en degradé, texto legible
+═══════════════════════════════════════════════════════════ */
+
+:root { --rf-ease: cubic-bezier(0.16, 1, 0.30, 1); }
+
+/* spotlight que sigue al cursor — se inyecta como <span class="rf-spot"> */
+.rf-spot {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  z-index: 0; opacity: 0; transition: opacity .45s var(--rf-ease);
+  background: radial-gradient(220px 220px at var(--sx, 50%) var(--sy, 50%),
+              var(--rf-spot, rgba(42,95,219,0.12)), transparent 62%);
+}
+.combo:hover .rf-spot, .cat:hover .rf-spot,
+.casos .voice:hover .rf-spot { opacity: 1; }
+.combo > :not(.rf-spot),
+.cat  > :not(.rf-spot),
+.casos .voice > :not(.rf-spot) { position: relative; z-index: 1; }
+
+/* ━━━━━━━━ 1 · COMBOS — 3 puertas de entrada + el premium en grande ━━━━━━━━
+   Tres combos arriba (cada uno con peso propio) y el Partnership (dorado)
+   abajo, GRANDE y oscuro — es el que más queremos vender. */
+.combos__grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: clamp(16px, 1.6vw, 22px) !important;
+  align-items: stretch;
+  max-width: 1180px; margin-inline: auto;
+}
+
+/* --- las 3 tarjetas de arriba: verticales y limpias --- */
+.combo {
+  --rf-spot: rgba(42,95,219,0.10);
+  display: flex !important; flex-direction: column;
+  border-radius: 24px !important;
+  padding: clamp(26px, 2vw, 36px) clamp(24px, 1.8vw, 30px) !important;
+  background: linear-gradient(180deg, #ffffff, #FBFAF6) !important;
+  border: 1px solid rgba(20,36,88,0.09) !important;
+  box-shadow: 0 1px 2px rgba(20,36,88,0.05), 0 22px 46px -28px rgba(20,36,88,0.28) !important;
+  transition: transform .5s var(--rf-ease), box-shadow .5s var(--rf-ease), border-color .4s !important;
+}
+.combo:hover {
+  transform: translateY(-8px) !important;
+  border-color: rgba(42,95,219,0.30) !important;
+  box-shadow: 0 2px 4px rgba(20,36,88,0.06), 0 42px 84px -36px rgba(20,36,88,0.42) !important;
+}
+.combo__tag  { align-self: flex-start; margin: 0 0 16px !important; font-size: 10px !important; letter-spacing: 0.14em !important; padding: 7px 13px !important; box-shadow: 0 6px 16px -6px rgba(204,34,51,0.5); }
+.combo__mod  { font-size: 11px !important; letter-spacing: 0.14em !important; }
+.combo__situ { font-size: 14px !important; line-height: 1.5 !important; margin-top: 14px !important; padding-left: 14px !important; position: relative; }
+.combo__situ::before { content: ""; position: absolute; left: 0; top: 3px; bottom: 3px; width: 3px; border-radius: 3px; background: var(--navy); }
+.combo__name { font-size: clamp(23px, 1.9vw, 28px) !important; margin-top: 8px !important; line-height: 1.05 !important; }
+.combo__plan { font-size: 14.5px !important; margin-top: 10px !important; }
+.combo__div  { display: block !important; height: 1px; margin: 20px 0 16px !important; }
+.combo__incluye { font-size: 13.5px !important; line-height: 1.6 !important; flex-grow: 1; }
+.combo__cta  { margin-top: 22px !important; padding: 14px 20px !important; font-size: 14px !important; width: 100% !important; }
+
+/* --- la estrella (Presencia + Venta): NAVY, no blanco --- */
+.combo--star {
+  --rf-spot: rgba(92,200,255,0.22);
+  background:
+    radial-gradient(130% 110% at 88% -10%, rgba(92,200,255,0.26), transparent 55%),
+    radial-gradient(120% 120% at 0% 110%, rgba(77,127,232,0.22), transparent 60%),
+    var(--navy) !important;
+  border-color: rgba(92,200,255,0.24) !important;
+  color: #fff;
+}
+.combo--star .combo__name { color: #fff !important; }
+.combo--star .combo__plan, .combo--star .combo__incluye { color: rgba(255,255,255,0.80) !important; }
+.combo--star .combo__situ { color: #9DBCFF !important; }
+.combo--star .combo__situ::before { background: #5CC8FF; }
+.combo--star .combo__div { background: rgba(255,255,255,0.16) !important; }
+
+/* --- el DORADO en GRANDE: banda premium oscura, full-width, abajo --- */
+.combo--gold {
+  --rf-spot: rgba(217,182,90,0.20);
+  grid-column: 1 / -1;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.78fr);
+  column-gap: clamp(30px, 4vw, 64px);
+  align-items: start;
+  grid-template-areas:
+    "tag     incluye"
+    "mod     incluye"
+    "name    incluye"
+    "plan    incluye"
+    "situ    incluye"
+    "cta     incluye";
+  padding: clamp(34px, 3.4vw, 54px) !important;
+  background: linear-gradient(135deg, #182a52 0%, #0e1830 72%) !important;
+  border: 1px solid rgba(217,182,90,0.40) !important;
+  box-shadow: 0 36px 84px -36px rgba(9,16,38,0.7), inset 0 1px 0 rgba(217,182,90,0.18) !important;
+  color: #fff;
+}
+.combo--gold .combo__tag  { grid-area: tag; align-self: start; justify-self: start; margin: 0 !important;
+  background: linear-gradient(135deg, #E9C766, #B8862F) !important; color: #1a1305 !important; box-shadow: 0 8px 20px -8px rgba(184,134,47,0.6); }
+.combo--gold .combo__mod  { grid-area: mod; color: #E5C879 !important; margin-top: 14px; }
+.combo--gold .combo__name { grid-area: name; color: #fff !important; font-size: clamp(32px, 3.6vw, 52px) !important; margin-top: 8px !important; line-height: 1.0 !important; }
+.combo--gold .combo__plan { grid-area: plan; color: rgba(255,255,255,0.82) !important; font-size: clamp(16px, 1.4vw, 19px) !important; margin-top: 14px !important; max-width: 34ch; }
+.combo--gold .combo__situ { grid-area: situ; color: #E5C879 !important; margin-top: 20px !important; max-width: 40ch; }
+.combo--gold .combo__situ::before { background: linear-gradient(180deg, #E9C766, #B8862F) !important; }
+.combo--gold .combo__div  { display: none !important; }
+.combo--gold .combo__incluye {
+  grid-area: incluye; align-self: center; flex-grow: 0;
+  padding: clamp(22px, 2vw, 30px) !important; border-radius: 18px;
+  background: rgba(217,182,90,0.08) !important; border: 1px solid rgba(217,182,90,0.22) !important;
+  font-size: 15px !important; line-height: 1.66 !important; color: rgba(255,255,255,0.86) !important;
+}
+.combo--gold .combo__incluye::before {
+  content: "Qué incluye"; display: block;
+  font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #E5C879; margin-bottom: 12px;
+}
+.combo--gold .combo__cta {
+  grid-area: cta; align-self: end; justify-self: start; width: auto !important; margin: 22px 0 0 !important;
+  background: linear-gradient(135deg, #E9C766, #B8862F) !important; color: #1a1305 !important;
+  padding: 15px 30px !important; font-size: 14.5px !important;
+}
+
+/* responsive combos */
+@media (max-width: 900px) {
+  .combos__grid { grid-template-columns: 1fr !important; }
+  .combo--gold {
+    grid-template-columns: 1fr;
+    grid-template-areas: "tag" "mod" "name" "plan" "situ" "incluye" "cta";
+  }
+  .combo--gold .combo__incluye { align-self: stretch; margin-top: 22px; }
+  .combo--gold .combo__cta { justify-self: stretch; width: 100% !important; }
+}
+
+/* ━━━━━━━━ 2 · CATEGORÍAS — táctiles + color por familia ━━━━━━━━ */
+.cats__grid { gap: clamp(12px, 1.1vw, 18px) !important; }
+.cat {
+  --cat: #2A5FDB;
+  --rf-spot: color-mix(in srgb, var(--cat) 16%, transparent);
+  border-radius: 20px !important;
+  padding: 24px 22px !important;
+  background: linear-gradient(180deg, #ffffff, #FCFBF8) !important;
+  border: 1px solid rgba(20,36,88,0.09) !important;
+  box-shadow: 0 1px 2px rgba(20,36,88,0.04), 0 14px 30px -22px rgba(20,36,88,0.22) !important;
+  transform-style: preserve-3d; will-change: transform;
+  transition: transform .3s var(--rf-ease), border-color .3s, box-shadow .4s var(--rf-ease) !important;
+}
+.cat:hover {
+  border-color: color-mix(in srgb, var(--cat) 42%, rgba(20,36,88,0.10)) !important;
+  box-shadow: 0 2px 4px rgba(20,36,88,0.06), 0 30px 60px -32px color-mix(in srgb, var(--cat) 30%, rgba(20,36,88,0.4)) !important;
+}
+.cat__n {
+  display: inline-grid; place-items: center; width: 30px; height: 30px;
+  border-radius: 9px; background: color-mix(in srgb, var(--cat) 12%, #fff) !important; color: var(--cat) !important;
+  font-weight: 700 !important; transition: background .3s, color .3s, transform .35s var(--rf-ease);
+}
+.cat:hover .cat__n { background: var(--cat) !important; color: #fff !important; }
+.cat__name { font-size: 16.5px !important; margin-top: 4px; }
+.cat__see {
+  margin-top: auto; padding-top: 8px; color: var(--cat) !important;
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase;
+  opacity: 0; transform: translateX(-4px);
+  transition: opacity .3s var(--rf-ease), transform .3s var(--rf-ease), color .3s;
+}
+.cat:hover .cat__see { opacity: 1; transform: translateX(0); }
+@media (hover: none) { .cat__see { opacity: 1; transform: none; } }
+
+/* familia CONTENIDO/CREATIVO — coral (unidos: CM + contenido + producción) */
+.cat[data-svc="cm"], .cat[data-svc="contenido"], .cat[data-svc="produccion"] { --cat: #E0556E; }
+/* PAID MEDIA — verde performance */
+.cat[data-svc="paid"]     { --cat: #1FA971; }
+/* BRANDING — violeta */
+.cat[data-svc="branding"] { --cat: #8B5CF6; }
+/* WEB — turquesa */
+.cat[data-svc="web"]      { --cat: #14A8C4; }
+/* EMAIL — azul */
+.cat[data-svc="email"]    { --cat: #2A6FDB; }
+
+/* POSICIONAMIENTO EN IA — brillo tipo Instagram (el diferencial 2026) */
+.cat[data-svc="ia"] {
+  --cat: #C13CC4;
+  border: 1.5px solid transparent !important;
+  background:
+    linear-gradient(#ffffff, #FCFBF8) padding-box,
+    linear-gradient(135deg, #FEDA75, #FA7E1E 28%, #D62976 55%, #962FBF 78%, #4F5BD5) border-box !important;
+}
+.cat[data-svc="ia"] .cat__n,
+.cat[data-svc="ia"]:hover .cat__n {
+  background: linear-gradient(135deg, #FA7E1E, #D62976 55%, #962FBF) !important; color: #fff !important;
+}
+.cat[data-svc="ia"]:hover {
+  box-shadow: 0 22px 46px -24px rgba(214,41,118,0.5), 0 0 0 1px rgba(214,41,118,0.18) !important;
+}
+.cat[data-svc="ia"] .cat__see { color: #C13CC4 !important; }
+
+/* ━━━━━━━━ 3 · TESTIMONIOS — tarjetas limpias, sin degradé, legibles ━━━━━━━━ */
+.casos__grid, .casos__row2 { align-items: stretch !important; }
+
+.casos .voice:not(.voice--metric):not(.voice--cta) {
+  --rf-spot: rgba(122,162,240,0.16);
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.11) !important;
+  border-radius: 18px !important;
+  padding: clamp(26px, 2.2vw, 36px) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  overflow: hidden !important; position: relative !important;
+  transition: transform .4s var(--rf-ease), border-color .3s, background .3s !important;
+}
+.casos .voice:not(.voice--metric):not(.voice--cta):hover {
+  transform: translateY(-4px) !important;
+  background: rgba(255,255,255,0.075) !important;
+  border-color: rgba(122,162,240,0.40) !important;
+}
+
+/* comilla: color sólido, sin gradiente que recargue */
+.casos .voice__q {
+  background: none !important;
+  -webkit-text-fill-color: rgba(122,162,240,0.55) !important;
+  color: rgba(122,162,240,0.55) !important;
+}
+/* texto del testimonio: blanco, claro, se lee */
+.casos .voice__text {
+  color: #ffffff !important;
+  font-style: normal !important;
+  font-weight: 450 !important;
+  line-height: 1.6 !important;
+}
+.casos .voice--sm .voice__text { color: rgba(255,255,255,0.92) !important; }
+.casos .voice__nm { color: #fff !important; }
+.casos .voice__rl { color: rgba(255,255,255,0.55) !important; }
+
+/* palabras destacadas del título: estaban casi invisibles (0.45) */
+.casos .casos__title .mut {
+  color: #9DBCFF !important;
+  -webkit-text-fill-color: #9DBCFF !important;
+}
+.casos .casos__pill { color: rgba(255,255,255,0.72) !important; }
+.casos .voice--metric .v { color: #fff !important; }
+
+/* ━━━━━━━━ 4 · CIERRE — “vale” visible (era transparente) ━━━━━━━━ */
+.contacto__title .ac {
+  background: none !important;
+  -webkit-text-fill-color: rgb(120, 133, 186) !important;
+  color: rgb(120, 133, 186) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .combo, .cat, .casos .voice { transition: none !important; }
+}
+
+/* ━━━━━━━━ 5 · INTRO — logo real de CREA con reveal “a mano” ━━━━━━━━ */
+.intro__logo--img {
+  width: min(420px, 70vw) !important;
+  height: auto !important;
+  display: block; margin: 0 auto;
+  opacity: 0; transform: translateY(8px) scale(0.965);
+  filter: blur(7px);
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+}
+.intro.play .intro__logo--img {
+  animation: introLogoReveal 1.35s cubic-bezier(0.16, 1, 0.30, 1) 0.2s forwards;
+}
+@keyframes introLogoReveal {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.965); filter: blur(7px); -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); }
+  55%  { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); }
+}
+/* si la intro se salta o hay reduce-motion, el logo se ve igual */
+.intro.gone .intro__logo--img,
+.intro:not(.play) .intro__logo--img {
+  opacity: 1; transform: none; filter: none;
+  -webkit-clip-path: none; clip-path: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro__logo--img { opacity: 1; transform: none; filter: none; -webkit-clip-path: none; clip-path: none; animation: none !important; }
+}
+
+/* ━━━━━━━━ 6 · HERO — zoom cinematográfico lento hacia el rostro de Elías ━━━━━━━━
+   El texto queda fijo (no se mueve con el cursor); sólo la imagen hace un
+   "ken burns" muy lento centrado en su cara, y el fondo se inclina en 3D. */
+.hero__bg img {
+  object-position: 55% 2% !important;
+  transform-origin: 60% 4%;
+  transform: none;
+  animation: heroKenburns 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes heroKenburns {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.24); }
+}
+.hero.is-parallax .hero__bg img { transition: none; }
+@media (max-width: 860px) {
+  .hero__bg img {
+    object-position: 60% 3% !important;
+    transform-origin: 62% 4%;
+    animation: heroKenburnsM 26s ease-in-out infinite alternate;
+  }
+  @keyframes heroKenburnsM {
+    from { transform: scale(1.05); }
+    to   { transform: scale(1.18); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg img { animation: none; transform: scale(1.07); }
+}
