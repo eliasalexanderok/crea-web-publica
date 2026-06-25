@@ -16,12 +16,21 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.creatucontenido\.com\.ar$ [NC]
 RewriteRule ^ https://creatucontenido.com.ar%{REQUEST_URI} [R=301,L]
 
-# ─── URLs limpias para artículos ──────────────
-# /recursos  →  /Recursos.html
-RewriteRule ^recursos/?$  /Recursos.html  [R=301,L]
+# ─── URLs limpias para artículos (canónicas) ──
+# 1) Canonicalización: si alguien entra por la versión .html, redirigir 301 a la
+#    URL limpia (que es la que declaran canonical + sitemap). El check THE_REQUEST
+#    asegura que esto SOLO se dispare en la petición real del navegador, nunca en
+#    la reescritura interna de abajo → así no se forma un loop.
+RewriteCond %{THE_REQUEST} \s/+recurso-([a-z0-9\-]+)\.html[\s?] [NC]
+RewriteRule ^  /recursos/%1  [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+Recursos\.html[\s?] [NC]
+RewriteRule ^  /recursos  [R=301,L]
 
-# /recursos/slug  →  /recurso-slug.html
-RewriteRule ^recursos/([a-z0-9\-]+)/?$  /recurso-$1.html  [R=301,L]
+# 2) Servicio interno: la URL limpia entrega el archivo real SIN redirigir (200).
+#    /recursos        →  Recursos.html
+#    /recursos/slug   →  recurso-slug.html
+RewriteRule ^recursos/?$                 /Recursos.html    [L]
+RewriteRule ^recursos/([a-z0-9\-]+)/?$   /recurso-$1.html  [L]
 
 # /autor-elias-alexander  →  /autor-elias-alexander.html
 RewriteRule ^autor-elias-alexander/?$  /autor-elias-alexander.html  [R=301,L]

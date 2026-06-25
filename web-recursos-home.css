@@ -39,7 +39,7 @@
 .rcard:hover { transform: translateY(-6px); border-color: rgba(27,47,110,0.4);
   background: #fff; box-shadow: 0 26px 54px -28px rgba(20,36,88,0.28); }
 .rcard__media { position: relative; aspect-ratio: 16/9; overflow: hidden; }
-.rcard__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-io); }
+.rcard__media img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-io); }
 .rcard:hover .rcard__media img { transform: scale(1.05); }
 /* placeholder dark */
 .rcard__ph { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden;

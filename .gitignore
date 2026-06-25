@@ -1,0 +1,13 @@
+# Config local de previsualización (Claude Code) — no va al repo público
+.claude/
+
+# Sistema operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporales
+*.opt.mp4
+*.tmp
+*~

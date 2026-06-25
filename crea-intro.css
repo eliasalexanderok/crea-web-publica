@@ -24,21 +24,19 @@
 .crea-intro.is-leaving::after { opacity: 1; }
 .crea-intro.is-gone { display: none; }
 
-/* aurora suave que respira */
+/* halo navy, casi imperceptible — da profundidad sin "decorar" */
 .crea-intro__aurora {
   position: absolute; inset: -12%; pointer-events: none;
   background:
-    radial-gradient(42% 36% at 26% 60%, rgba(77, 127, 232, 0.20), transparent 70%),
-    radial-gradient(38% 32% at 72% 36%, rgba(92, 200, 255, 0.16), transparent 70%),
-    radial-gradient(30% 26% at 52% 50%, rgba(27, 47, 110, 0.08), transparent 70%);
-  opacity: 0; transform: scale(1.07);
-  transition: opacity 1.1s ease, transform 6.5s cubic-bezier(0.16, 1, 0.3, 1);
+    radial-gradient(46% 40% at 50% 44%, rgba(27, 47, 110, 0.07), transparent 72%);
+  opacity: 0; transform: scale(1.04);
+  transition: opacity 1.2s ease, transform 7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .crea-intro.is-playing .crea-intro__aurora { opacity: 1; transform: scale(1); }
 
-/* grano sutil */
+/* grano editorial muy sutil (papel) */
 .crea-intro__grain {
-  position: absolute; inset: 0; pointer-events: none; opacity: 0.5; mix-blend-mode: multiply;
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.22; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
@@ -54,27 +52,27 @@
 /* logo con reveal "mask-rise" + barrido de luz */
 .crea-intro__logo-wrap { position: relative; display: inline-block; overflow: hidden; line-height: 0; }
 .crea-intro__logo {
-  width: min(380px, 64vw); height: auto; display: block; margin: 0 auto;
-  opacity: 0; transform: translateY(16px); filter: blur(9px);
+  width: min(360px, 60vw); height: auto; display: block; margin: 0 auto;
+  opacity: 0; transform: translateY(12px); filter: blur(4px);
   -webkit-clip-path: inset(0 0 100% 0); clip-path: inset(0 0 100% 0);
 }
 .crea-intro.is-playing .crea-intro__logo {
-  animation: ci-logo 1.25s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
+  animation: ci-logo 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.16s forwards;
 }
 @keyframes ci-logo {
-  0%   { opacity: 0; transform: translateY(16px); filter: blur(9px); -webkit-clip-path: inset(0 0 100% 0); clip-path: inset(0 0 100% 0); }
-  55%  { opacity: 1; filter: blur(0); }
+  0%   { opacity: 0; transform: translateY(12px); filter: blur(4px); -webkit-clip-path: inset(0 0 100% 0); clip-path: inset(0 0 100% 0); }
+  60%  { opacity: 1; filter: blur(0); }
   100% { opacity: 1; transform: translateY(0); filter: blur(0); -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); }
 }
 .crea-intro__logo-wrap::after {
   content: ""; position: absolute; top: -10%; bottom: -10%; left: -70%; width: 42%;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.65), transparent);
   transform: skewX(-16deg); opacity: 0; pointer-events: none;
 }
-.crea-intro.is-playing .crea-intro__logo-wrap::after { animation: ci-sheen 1.15s ease 1.05s forwards; }
+.crea-intro.is-playing .crea-intro__logo-wrap::after { animation: ci-sheen 1.25s ease 1.0s forwards; }
 @keyframes ci-sheen {
   0%   { left: -70%; opacity: 0; }
-  28%  { opacity: 0.95; }
+  30%  { opacity: 0.55; }
   100% { left: 130%; opacity: 0; }
 }
 

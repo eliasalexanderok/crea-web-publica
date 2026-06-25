@@ -107,31 +107,38 @@ body.anim .stagger > * { transition: opacity var(--dur-md) var(--spring), transf
 .btn--lg { font-size: 17px; padding: 20px 34px; }
 
 /* ═══════════ NAV ═══════════ */
+/* ── NAV · LIQUID GLASS FLOTANTE ──
+   Vidrio translúcido desde el arranque (no espera al scroll): el menú flota
+   despegado de los bordes, con blur, borde superior de luz y sombra suave.
+   Texto y logo en oscuro siempre → se leen sobre cualquier portada. */
 .nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 14px; left: 14px; right: 14px; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 18px var(--gutter);
-  transition: background .35s, padding .35s, box-shadow .35s, border-color .35s;
-  border-bottom: 1px solid transparent;
+  padding: 12px clamp(16px, 3vw, 26px);
+  border-radius: 18px;
+  background: rgba(246,244,240,0.55);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 10px 34px -16px rgba(20,36,88,0.30), inset 0 1px 0 rgba(255,255,255,0.55);
+  transition: background .35s, padding .35s, box-shadow .35s, top .35s;
 }
 .nav.scrolled {
-  background: rgba(246,244,240,0.82); backdrop-filter: blur(18px) saturate(160%);
-  -webkit-backdrop-filter: blur(18px) saturate(160%); padding-block: 12px; border-color: var(--line);
+  top: 8px;
+  background: rgba(246,244,240,0.72);
+  box-shadow: 0 12px 40px -16px rgba(20,36,88,0.34), inset 0 1px 0 rgba(255,255,255,0.6);
 }
 .nav__logo { height: 28px; width: auto; }
-.nav__logo--light { display: block; } .nav__logo--dark { display: none; }
-.nav.scrolled .nav__logo--light { display: none; } .nav.scrolled .nav__logo--dark { display: block; }
+.nav__logo--light { display: none; } .nav__logo--dark { display: block; }
 .nav__right { display: flex; align-items: center; gap: 30px; }
-.nav__link { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.85); transition: color .2s; }
-.nav.scrolled .nav__link { color: var(--text-mid); }
-.nav__link:hover { color: #fff; } .nav.scrolled .nav__link:hover { color: var(--navy); }
+.nav__link { font-size: 15px; font-weight: 500; color: var(--text-mid); transition: color .2s; }
+.nav__link:hover { color: var(--navy); }
 .nav__cta { font-size: 14.5px; padding: 12px 22px; }
-.nav.scrolled .nav__cta.btn--ghost-light { color: var(--navy); border-color: var(--navy); }
-.nav.scrolled .nav__cta.btn--ghost-light:hover { background: var(--navy); color: #fff; }
+.nav__cta.btn--ghost-light { color: var(--navy); border-color: rgba(27,47,110,0.45); }
+.nav__cta.btn--ghost-light:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
 .nav__burger { display: none; flex-direction: column; gap: 5px; width: 30px; height: 30px;
   background: none; border: 0; cursor: pointer; padding: 4px; }
-.nav__burger span { height: 2px; background: #fff; border-radius: 2px; transition: .3s var(--spring); }
-.nav.scrolled .nav__burger span { background: var(--navy); }
+.nav__burger span { height: 2px; background: var(--navy); border-radius: 2px; transition: .3s var(--spring); }
 @media (max-width: 860px) {
   .nav__links-inline { display: none; }
   .nav__burger { display: flex; }
