@@ -47,7 +47,7 @@
       byline: bylineNote('assets/elias-plano-medio.png', 'Elías Alexander', 'Estrategia & IA', '28 May 2026', '9 min de lectura'),
       href: 'recurso-posicionamiento-ia-geo.html', linkText: 'Leer la guía', read: 'Guía · Nivel intermedio',
       tag: 'Nuevo · 2026', ic: icCamera, phLab: 'Imagen de tapa<br><b>1600 × 1200 · GEO / IA</b>',
-      img: 'assets/recursos/geo-featured.png', alt: 'Que ChatGPT recomiende tu marca'
+      img: 'assets/Recursos/geo-featured.png', alt: 'Que ChatGPT recomiende tu marca'
     },
     {
       kicker: '<b>Opinión</b> · IA & Trabajo',
@@ -56,7 +56,7 @@
       byline: bylineNote('assets/elias-plano-medio.png', 'Elías Alexander', 'Founder de CREA', '20 Jun 2026', '8 min de lectura'),
       href: 'recurso-ia-sin-trabajo.html', linkText: 'Leer la nota', read: 'Opinión · 8 min',
       tag: 'Nota destacada', ic: icCamera, phLab: 'Imagen de tapa<br><b>IA y trabajo</b>',
-      img: 'assets/recursos/ia-sin-trabajo.png', alt: '¿La IA nos va a dejar sin trabajo?'
+      img: 'assets/Recursos/ia-sin-trabajo.png', alt: '¿La IA nos va a dejar sin trabajo?'
     },
     {
       service: true,
@@ -74,7 +74,7 @@
       byline: bylineNote('assets/lucas-plano-medio.png', 'Lucas Iván Rodríguez', 'Paid Media', '18 Jun 2026', '8 min de lectura'),
       href: 'recurso-emprender-poco-presupuesto.html', linkText: 'Leer la guía', read: 'Guía · 8 min',
       tag: 'Guía práctica', ic: icCamera, phLab: 'Imagen de tapa<br><b>Poco presupuesto</b>',
-      img: 'assets/recursos/emprender-poco-presupuesto.png', alt: 'Emprender con poco presupuesto'
+      img: 'assets/Recursos/emprender-poco-presupuesto.png', alt: 'Emprender con poco presupuesto'
     },
     {
       kicker: '<b>Contenido</b> · Narrativa',
@@ -83,7 +83,7 @@
       byline: bylineNote('assets/elias-plano-medio.png', 'Elías Alexander', 'Estrategia & Contenido', '5 Jun 2026', '7 min de lectura'),
       href: 'recurso-storytelling-marcas.html', linkText: 'Leer la guía', read: 'Guía · 7 min',
       tag: 'Storytelling', ic: icCamera, phLab: 'Imagen de tapa<br><b>Storytelling</b>',
-      img: 'assets/recursos/storytelling-marcas.png', alt: 'Contá la historia de tu marca'
+      img: 'assets/Recursos/storytelling-marcas.png', alt: 'Contá la historia de tu marca'
     }
   ];
 
