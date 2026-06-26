@@ -137,6 +137,23 @@ body { background: var(--mx-bg); color: var(--mx-text); }
 .hero__sec::before { background: rgba(40,41,47,0.4); }
 .hero__stats { color: rgba(40,41,47,0.6); }
 .hero__stats b { color: var(--navy); }
+
+/* MOBILE: el texto ocupa todo el ancho, así que el velo horizontal dejaba el
+   título oscuro sobre la persona y no se leía. Lo pasamos a un velo VERTICAL:
+   la persona asoma arriba y el texto baja sobre papel sólido = siempre legible. */
+@media (max-width: 860px) {
+  .hero__overlay {
+    background: linear-gradient(180deg,
+      rgba(246,244,240,0)    0%,
+      rgba(246,244,240,0.34) 12%,
+      rgba(246,244,240,0.82) 24%,
+      rgba(246,244,240,0.93) 40%,
+      #F6F4F0                72%) !important;
+  }
+  .hero__overlay-b {
+    background: linear-gradient(0deg, #F6F4F0 0%, rgba(246,244,240,0) 30%) !important;
+  }
+}
 /* la palabra [ver] como acento navy; "se" en gris oscuro */
 .hero__ver { background: var(--mx-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero__se { color: #25262B; }
@@ -385,6 +402,14 @@ body { background: var(--mx-bg); color: var(--mx-text); }
 .steps .step:nth-child(2) .step__line::before { background: #4D7FE8; }
 .steps .step:nth-child(3) .step__line::before { background: linear-gradient(90deg, #2F62E0, #1A3FB0); }
 .step__desc { color: var(--text-mid); }
+
+/* En mobile la .step__line se oculta (era la que daba el aire bajo el keycap).
+   Sin ella, la sombra 3D de la caja azul caía sobre el título → separamos.
+   El número fantasma gigante se amontona en una sola columna → lo ocultamos. */
+@media (max-width: 800px) {
+  .step__num { margin-bottom: 26px; }
+  .step::before { display: none; }
+}
 
 /* ═══════════ CASOS — plancha navy ═══════════ */
 .casos { background: linear-gradient(180deg, #14235A 0%, #101C49 100%); color: #fff; }
