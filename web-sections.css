@@ -188,6 +188,32 @@
 .casos__avs { display: flex; }
 .casos__avs span { width: 24px; height: 24px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); display: grid; place-items: center; font-family: var(--f-mono); font-size: 9px; font-weight: 700; color: #fff; margin-left: -6px; }
 .casos__avs span:first-child { margin-left: 0; }
+/* rating liquid glass: 5 estrellas grandes que cargan de 1 a 5 */
+.casos__rating {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 16px 28px; border-radius: 18px; opacity: 1 !important;
+  background: rgba(255,255,255,0.06);
+  -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 12px 32px -18px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.stars5 { display: flex; gap: 7px; font-size: 32px; line-height: 1; }
+/* doradas y visibles SIEMPRE (la animación nunca las oculta) */
+.stars5__star { color: #f5a623; text-shadow: 0 0 10px rgba(245,166,35,0.30); display: inline-block; }
+/* floritura: al entrar en pantalla, hacen un pop secuencial de 1 a 5 */
+.casos__rating.in .stars5__star {
+  animation: star-pop .5s cubic-bezier(0.34,1.56,0.64,1);
+  animation-delay: calc(var(--i) * 0.14s);
+}
+@keyframes star-pop {
+  0%   { transform: scale(0.55); text-shadow: 0 0 0 rgba(245,166,35,0); }
+  55%  { transform: scale(1.28); text-shadow: 0 0 18px rgba(245,166,35,0.7); }
+  100% { transform: scale(1); text-shadow: 0 0 10px rgba(245,166,35,0.30); }
+}
+.casos__rating-lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+@media (prefers-reduced-motion: reduce) {
+  .casos__rating.in .stars5__star { animation: none; }
+}
 .casos__grid { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
 .casos__row2 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 12px; }
 .voice { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 30px;
