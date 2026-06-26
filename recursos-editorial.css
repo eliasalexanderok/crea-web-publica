@@ -371,6 +371,57 @@
   transition: transform .4s var(--spring); }
 .eyt__player:hover .eyt__play span { transform: scale(1.08); }
 .eyt__play svg { width: 28px; height: 28px; color: #fff; margin-left: 4px; }
+
+/* Estado "próximamente" del player (sin miniatura todavía) */
+.eyt__player--soon { cursor: default; }
+.eytsoon {
+  position: absolute; inset: 0; z-index: 2; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  text-align: center; padding: 24px;
+  background:
+    radial-gradient(120% 120% at 78% 12%, rgba(77,127,232,0.35), transparent 60%),
+    linear-gradient(150deg, #21356f 0%, #142458 70%);
+}
+.eytsoon__glow {
+  position: absolute; width: 58%; aspect-ratio: 1; top: 58%; left: 18%; border-radius: 50%;
+  background: radial-gradient(circle, rgba(204,34,51,0.5), transparent 65%);
+  filter: blur(30px); animation: eytsoon-float 7s var(--ease-io) infinite;
+}
+@keyframes eytsoon-float {
+  0%, 100% { transform: translate(0, 0);       opacity: .55; }
+  50%      { transform: translate(42%, -36%);   opacity: .85; }
+}
+.eytsoon__bars { position: relative; z-index: 2; display: flex; align-items: flex-end; gap: 5px; height: 42px; }
+.eytsoon__bars span {
+  width: 5px; border-radius: 3px;
+  background: linear-gradient(180deg, #fff, rgba(255,255,255,0.55));
+  animation: eytsoon-eq 1.1s var(--ease-io) infinite; animation-delay: var(--d);
+}
+@keyframes eytsoon-eq {
+  0%, 100% { height: 22%; opacity: .55; }
+  50%      { height: 100%; opacity: 1; }
+}
+.eytsoon__big {
+  position: relative; z-index: 2;
+  font-family: var(--f-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(26px, 4vw, 40px); color: #fff; letter-spacing: -0.01em; line-height: 1;
+}
+.eytsoon__pill {
+  position: relative; z-index: 2;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.82); padding: 7px 14px; border-radius: 999px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.eytsoon__dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #FF5A6E;
+  box-shadow: 0 0 0 0 rgba(255,90,110,0.6); animation: livePulse 2s var(--ease-io) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .eytsoon__glow, .eytsoon__bars span, .eytsoon__dot { animation: none; }
+  .eytsoon__bars span { height: 64%; }
+}
 @media (max-width: 860px) { .eyt__inner { grid-template-columns: 1fr; } }
 
 /* ───────────────────────────────────────────────────────────

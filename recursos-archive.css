@@ -139,6 +139,21 @@
 .feedad--paper .feedad__lab { color: var(--red); }
 .feedad--paper .feedad__sub { color: var(--text-mid); }
 
+/* variante REGISTRO DE MARCA — servicio nuevo, sello legal en oro */
+.feedad--mark { background: linear-gradient(135deg, #12245c 0%, #0b1736 78%); border-color: transparent; color: #fff; }
+.feedad--mark .feedad__lab { color: #E9C77B; }
+.feedad--mark .feedad__sub { color: rgba(255,255,255,0.76); }
+.feedad--mark .feedad__title .ac { color: #E9C77B; -webkit-text-fill-color: #E9C77B; }
+.feedad--mark .feedad__seal {
+  position: absolute; z-index: 1; right: clamp(18px, 5vw, 64px); top: 50%; transform: translateY(-50%);
+  font-family: var(--f-display); font-weight: 700; line-height: 1;
+  font-size: clamp(110px, 16vw, 200px); color: rgba(233,199,123,0.12);
+  pointer-events: none; user-select: none;
+}
+@media (max-width: 680px) {
+  .feedad--mark .feedad__seal { right: 10px; top: 12px; transform: none; font-size: 84px; }
+}
+
 @media (max-width: 680px) {
   .feedad__in { flex-direction: column; align-items: flex-start; gap: 20px; }
   .feedad__cta { width: 100%; justify-content: center; }

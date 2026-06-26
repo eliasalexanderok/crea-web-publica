@@ -1,6 +1,9 @@
 # Config local de previsualización (Claude Code) — no va al repo público
 .claude/
 
+# Clave secreta de MailerLite — vive solo en el servidor, NUNCA en Git
+config.php
+
 # Fotos fuente en alta (originales) — se convierten a webp; no van al deploy
 assets/hd/
 
