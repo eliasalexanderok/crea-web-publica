@@ -1,6 +1,9 @@
 # Config local de previsualización (Claude Code) — no va al repo público
 .claude/
 
+# Fotos fuente en alta (originales) — se convierten a webp; no van al deploy
+assets/hd/
+
 # Sistema operativo
 Thumbs.db
 ehthumbs.db
