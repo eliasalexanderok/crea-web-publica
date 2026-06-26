@@ -79,12 +79,16 @@
   var mnav = document.getElementById('mnav');
   if (burger && mnav) {
     burger.addEventListener('click', function () {
-      mnav.classList.toggle('open');
-      document.body.style.overflow = mnav.classList.contains('open') ? 'hidden' : '';
+      var open = mnav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
     mnav.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         mnav.classList.remove('open');
+        burger.classList.remove('open');
+        document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
       });
     });

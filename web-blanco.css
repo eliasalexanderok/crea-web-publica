@@ -71,7 +71,8 @@ body { background: var(--mx-bg); color: var(--mx-text); }
 .nav.scrolled .nav__link { color: var(--text-mid); }
 .nav.scrolled .nav__link:hover { color: var(--navy); }
 .nav.scrolled .nav__burger span { background: var(--navy) !important; }
-.mnav { background: rgba(15,26,64,0.97); }
+/* menú mobile: translúcido para que se vea el liquid glass (blur en web.css) */
+.mnav { background: linear-gradient(180deg, rgba(13,22,52,0.80), rgba(8,13,34,0.86)); }
 
 /* CTA del nav — con brillo IA, como el hero */
 .nav__cta.btn--ghost-light {
