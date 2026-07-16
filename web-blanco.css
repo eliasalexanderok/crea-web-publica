@@ -158,6 +158,8 @@ body { background: var(--mx-bg); color: var(--mx-text); }
 /* la palabra [ver] como acento navy; "se" en gris oscuro */
 .hero__ver { background: var(--mx-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero__se { color: #25262B; }
+/* keyword SEO bajo el título: azul fuerte y legible sobre fondo claro */
+.hero__kw { color: #2A5FDB; }
 
 /* CTA principal sólido navy sobre fondo claro */
 .hero__ctas .btn--wa {
@@ -515,8 +517,13 @@ body { background: var(--mx-bg); color: var(--mx-text); }
 .chat__input:focus { border-color: #2A5FDB; }
 .chat__body::-webkit-scrollbar-thumb { background: rgba(18,32,80,0.25); }
 .msg--typing i { background: rgba(18,32,80,0.45); }
-.chat__chip { background: rgba(18,32,80,0.05); border-color: var(--mx-border); color: var(--navy); }
-.chat__chip:hover { background: rgba(42,95,219,0.12); }
+/* chips estilo liquid glass (tema claro): pill frosted con profundidad */
+.chat__chip { color: var(--navy); border-color: rgba(27,47,110,0.16);
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(243,247,255,0.5));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.95), 0 4px 16px rgba(18,32,80,0.1); }
+.chat__chip:hover { border-color: rgba(42,95,219,0.45);
+  background: linear-gradient(180deg, #ffffff, rgba(231,240,255,0.9));
+  box-shadow: inset 0 1px 0 #fff, 0 10px 24px rgba(42,95,219,0.2); }
 .chat__foot { border-top-color: var(--line); }
 .chat__close:hover { background: rgba(18,32,80,0.14); }
 

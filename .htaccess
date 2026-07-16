@@ -32,14 +32,25 @@ RewriteRule ^  /recursos  [R=301,L]
 RewriteRule ^recursos/?$                 /Recursos.html    [L]
 RewriteRule ^recursos/([a-z0-9\-]+)/?$   /recurso-$1.html  [L]
 
-# /autor-elias-alexander  →  /autor-elias-alexander.html
-RewriteRule ^autor-elias-alexander/?$  /autor-elias-alexander.html  [R=301,L]
+# ─── Páginas fijas: URL limpia = canónica (mismo patrón que recursos) ──
+# 1) Si entran por la versión .html (o el nombre viejo), 301 a la URL limpia.
+RewriteCond %{THE_REQUEST} \s/+autor-elias-alexander\.html[\s?] [NC]
+RewriteRule ^  /autor-elias-alexander  [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+autor-lucas-rodriguez\.html[\s?] [NC]
+RewriteRule ^  /autor-lucas-rodriguez  [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+Legales\.html[\s?] [NC]
+RewriteRule ^  /legales  [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+historia\.html[\s?] [NC]
+RewriteRule ^  /historia  [R=301,L]
+# Nombre viejo de la página historia ("CREA - Landing.html")
+RewriteCond %{THE_REQUEST} \s/+CREA(%20|\s)-(%20|\s)Landing\.html [NC]
+RewriteRule ^  /historia  [R=301,L]
 
-# /autor-lucas-rodriguez  →  /autor-lucas-rodriguez.html
-RewriteRule ^autor-lucas-rodriguez/?$  /autor-lucas-rodriguez.html  [R=301,L]
-
-# /legales  →  /Legales.html
-RewriteRule ^legales/?$  /Legales.html  [R=301,L]
+# 2) Servicio interno: la URL limpia entrega el archivo real SIN redirigir (200).
+RewriteRule ^autor-elias-alexander/?$  /autor-elias-alexander.html  [L]
+RewriteRule ^autor-lucas-rodriguez/?$  /autor-lucas-rodriguez.html  [L]
+RewriteRule ^legales/?$                /Legales.html                [L]
+RewriteRule ^historia/?$               /historia.html               [L]
 
 # ─── Página de error 404 ──────────────────────
 ErrorDocument 404 /index.html

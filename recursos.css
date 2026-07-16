@@ -554,3 +554,11 @@ body.anim .stagger > * { transition: opacity var(--dur-md) var(--spring), transf
 .feedback__btn:hover { border-color: var(--navy); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(20,36,88,0.1); }
 .feedback__thanks { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.03em; color: var(--navy); margin-left: auto; }
 @media (max-width: 540px) { .feedback { gap: 12px; } .feedback__btns, .feedback__thanks { margin-left: 0; width: 100%; } }
+
+/* ── Acento de títulos sin color en las notas ──────────────────
+   La palabra destacada toma el mismo color que el resto del título
+   (sin rojo ni azul), para una lectura más sobria y uniforme.
+   Las infografías y los pull-quotes mantienen su color. */
+.ahero__title .ac,
+.funnel__title .ac,
+.post__cover-big .ac { color: inherit; }

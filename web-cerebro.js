@@ -155,7 +155,7 @@
     {
       id: 'contacto',
       keys: ['whatsapp', 'wsp', 'telefono', 'numero', 'mail', 'correo', 'instagram', 'contacto', 'como los contacto', 'redes de ustedes'],
-      reply: 'Nos escribís cuando quieras 👇\n• WhatsApp: **+54 9 11 3926-1873**\n• Instagram: **@creatucontenidook**\n• Mail: creatucontenido.contacto@gmail.com\n¿Querés que te derive directo al WhatsApp?',
+      reply: 'Nos escribís cuando quieras 👇\n• WhatsApp: **+54 9 11 3926-1873**\n• Instagram: **@creatucontenidook**\n• Mail: info@creatucontenido.com.ar\n¿Querés que te derive directo al WhatsApp?',
       sugs: ['Sí, al WhatsApp', 'Agendar sesión', 'Tengo una duda']
     },
     {
@@ -163,6 +163,158 @@
       keys: ['calendario', 'que publicar', 'plantilla de contenido', 'planificar contenido', 'organizar contenido', 'plan de contenido'],
       reply: 'El secreto no es publicar más, es publicar **con criterio y de forma sostenida**: definí 4-5 pilares de contenido y asignalos a una estructura semanal para no decidir cada día. Te dejo una plantilla de 30 días: [Calendario de contenido](recurso-calendario-contenido.html). ¿Querés que lo armemos para tu marca?',
       sugs: ['Sí, ayúdenme', 'Ver Community Manager', 'Agendar sesión']
+    },
+
+    /* ── AUTOMATIZACIONES / IA APLICADA ─────────────────────── */
+    {
+      id: 'automatizaciones',
+      keys: ['automatizacion', 'automatizaciones', 'automatizar', 'agente', 'agentes', 'agente de ia', 'chatbot', 'bot para mi negocio', 'responder mensajes', 'responder solo', 'atencion automatica', 'flujos', 'crm'],
+      reply: 'Sí, armamos **automatizaciones y agentes de IA** para negocios: responder WhatsApp solo, agendar turnos, hacer seguimiento de clientes y sacarte de encima las tareas repetitivas. Te dejo esto: [Automatizaciones para tu negocio](recurso-automatizaciones-negocio.html) y [Agentes de IA](recurso-agentes-ia-negocio.html). ¿Qué tarea te está comiendo más tiempo hoy?',
+      sugs: ['Responder WhatsApp solo', 'Agendar turnos', 'Quiero esto']
+    },
+    {
+      id: 'wa_auto',
+      keys: ['whatsapp automatico', 'automatizar whatsapp', 'responder whatsapp solo', 'bot de whatsapp', 'mensajes automaticos whatsapp'],
+      reply: 'Se puede: un **agente que responde tu WhatsApp** las 24 hs, contesta lo de siempre, filtra consultas y te pasa solo las que valen la pena. Mirá cómo: [Automatizar WhatsApp](recurso-automatizaciones-whatsapp.html). ¿Recibís muchas consultas repetidas?',
+      sugs: ['Sí, un montón', '¿Cómo funciona?', 'Quiero esto']
+    },
+
+    /* ── RECURSOS / BLOG ────────────────────────────────────── */
+    {
+      id: 'recursos',
+      keys: ['recursos', 'blog', 'articulos', 'notas', 'guias', 'aprender', 'contenido gratis', 'material', 'leer', 'tienen blog'],
+      reply: 'Tenemos un montón de **recursos y guías gratis** sobre marketing, contenido, marca, pauta e IA — pensados para que apliques aunque no trabajes con nosotros. Mirá todo acá: [Recursos & Blog](Recursos.html). ¿Hay algún tema puntual que te interese?',
+      sugs: ['Marketing para mi rubro', 'Cómo crecer en redes', 'Posicionar en IA']
+    },
+
+    /* ── SEO LOCAL / RESEÑAS ────────────────────────────────── */
+    {
+      id: 'seo_local',
+      keys: ['seo local', 'google maps', 'aparecer en google', 'google business', 'mi negocio en google', 'ficha de google', 'busquedas locales', 'reseñas', 'resenas', 'opiniones', 'valoraciones'],
+      reply: 'Para que te encuentren en tu zona la clave es el **SEO local**: tu ficha de Google Business optimizada, reseñas reales y datos consistentes en todos lados. Te dejo esto: [SEO local](recurso-seo-local.html) y [Reseñas en Google](recurso-resenas-google.html). ¿Ya tenés tu negocio cargado en Google Maps?',
+      sugs: ['Sí, pero no aparece', 'No lo tengo cargado', 'Quiero ayuda con esto']
+    },
+
+    /* ── MÉTRICAS ───────────────────────────────────────────── */
+    {
+      id: 'metricas',
+      keys: ['metricas', 'kpi', 'kpis', 'medir', 'analitica', 'estadisticas', 'datos', 'como se si funciona', 'roi', 'retorno', 'que medir'],
+      reply: 'La métrica que importa no son los likes: es lo que mueve el negocio — alcance que convierte, mensajes, ventas y costo por resultado. Te dejo esto: [Las métricas que importan](recurso-metricas-que-importan.html). ¿Hoy estás midiendo algo o vas un poco a ciegas?',
+      sugs: ['Voy a ciegas', 'Mido pero no entiendo', 'Agendar sesión']
+    },
+
+    /* ── MARCA PERSONAL ─────────────────────────────────────── */
+    {
+      id: 'marca_personal',
+      keys: ['marca personal', 'personal branding', 'ser referente', 'posicionarme', 'autoridad', 'marca propia', 'influencer', 'ser conocido'],
+      reply: 'Una **marca personal** bien construida te convierte en referente y hace que te elijan a vos antes que al precio. No es postear tu cara: es estrategia, mensaje y constancia. Mirá esto: [Marca personal](recurso-marca-personal.html). ¿Querés posicionarte vos o tu empresa?',
+      sugs: ['A mí', 'Mi empresa', 'Quiero esto']
+    },
+
+    /* ── STORYTELLING ───────────────────────────────────────── */
+    {
+      id: 'storytelling',
+      keys: ['storytelling', 'historia de marca', 'narrativa', 'contar historias', 'emocionar', 'conectar con la gente'],
+      reply: 'Las marcas que se recuerdan no listan beneficios: **cuentan historias**. El storytelling conecta con la emoción y hace que tu mensaje pegue de verdad. Te dejo esto: [Storytelling para marcas](recurso-storytelling-marcas.html). ¿Querés que veamos cómo aplicarlo a la tuya?',
+      sugs: ['Sí, ayúdenme', 'Ver contenido', 'Agendar sesión']
+    },
+
+    /* ── FRECUENCIA DE PUBLICACIÓN ──────────────────────────── */
+    {
+      id: 'frecuencia',
+      keys: ['cada cuanto publicar', 'frecuencia', 'cuantas veces', 'cuanto postear', 'cuantas publicaciones', 'ritmo de publicacion', 'cuanto debo publicar'],
+      reply: 'No se trata de publicar todos los días, sino de ser **constante y con criterio**: mejor 3 buenos que 7 vacíos. Lo que mata es arrancar a full y abandonar. Mirá esto: [¿Cada cuánto publicar?](recurso-frecuencia-publicar.html). ¿Hoy cada cuánto estás posteando?',
+      sugs: ['Casi nada', 'Cuando me acuerdo', 'Quiero un plan']
+    },
+
+    /* ── EMPRENDER / POCO PRESUPUESTO ───────────────────────── */
+    {
+      id: 'emprender',
+      keys: ['emprender', 'emprendimiento', 'poco presupuesto', 'poca plata', 'sin plata', 'empezar negocio', 'recien empiezo', 'bajo presupuesto', 'no tengo presupuesto', 'arrancar de cero'],
+      reply: 'Se puede empezar con poco: lo que no podés saltear es la estrategia, y hoy la IA te da una palanca enorme para hacer más con menos. Te dejo esto: [Emprender con poco presupuesto](recurso-emprender-poco-presupuesto.html) y [Emprender con IA](recurso-emprender-con-ia.html). ¿En qué etapa estás: idea, arrancando o ya vendiendo?',
+      sugs: ['Solo una idea', 'Recién arranco', 'Ya vendo algo']
+    },
+
+    /* ── PONER PRECIO ───────────────────────────────────────── */
+    {
+      id: 'poner_precio',
+      keys: ['poner precio', 'cuanto cobrar', 'como cobro', 'fijar precio', 'precio de mi servicio', 'cobrar barato', 'cobrar caro', 'que precio pongo'],
+      reply: 'Ponerle precio a lo tuyo no es copiar al de al lado: es entender el valor que generás y saber comunicarlo. Si competís solo por precio, perdés. Te dejo esto: [¿Cómo poner precio?](recurso-como-poner-precio.html). ¿Vendés un producto o un servicio?',
+      sugs: ['Un servicio', 'Un producto', 'Agendar sesión']
+    },
+
+    /* ── RUBROS / INDUSTRIAS ────────────────────────────────── */
+    {
+      id: 'rubro_gastronomia',
+      keys: ['gastronomia', 'restaurante', 'restaurant', 'bar', 'cafeteria', 'cafe', 'comida', 'delivery', 'parrilla', 'cocina'],
+      reply: 'En gastronomía se come con los ojos: lo que mejor funciona es mostrar el plato, la cocina y la experiencia con buena producción, sumado a reseñas y pauta local. Te dejo la guía: [Marketing para gastronomía](recurso-marketing-gastronomia.html). ¿Tenés un restaurante, una cafetería o más delivery?',
+      sugs: ['Restaurante', 'Cafetería', 'Quiero crecer']
+    },
+    {
+      id: 'rubro_estetica',
+      keys: ['estetica', 'spa', 'belleza', 'centro de estetica', 'cosmetologia', 'depilacion', 'unas', 'pestañas', 'peluqueria'],
+      reply: 'En estética vendés transformación y confianza: el antes/después, los testimonios reales y un perfil ordenado convierten más que cualquier promoción. Mirá esto: [Marketing para estética](recurso-marketing-estetica.html). ¿Tenés un centro, un spa o atendés vos?',
+      sugs: ['Tengo un centro', 'Atiendo yo', 'Quiero más clientes']
+    },
+    {
+      id: 'rubro_odontologia',
+      keys: ['odontologia', 'dentista', 'odontologo', 'consultorio dental', 'clinica dental', 'ortodoncia', 'implantes'],
+      reply: 'En odontología la clave es generar confianza antes de la primera consulta: contenido que educa, reseñas de pacientes y aparecer cuando te buscan en la zona. Te dejo esto: [Marketing para odontología](recurso-marketing-odontologia.html). ¿Sos el odontólogo o manejás la comunicación de la clínica?',
+      sugs: ['Soy el profesional', 'Manejo la clínica', 'Quiero pacientes']
+    },
+    {
+      id: 'rubro_inmobiliaria',
+      keys: ['inmobiliaria', 'inmobiliarias', 'propiedades', 'real estate', 'corredor', 'alquileres', 'venta de propiedades', 'desarrollos'],
+      reply: 'En inmobiliarias el contenido vende dos cosas: las propiedades y tu credibilidad como asesor. Video, recorridos y SEO local hacen la diferencia. Mirá: [Marketing para inmobiliarias](recurso-marketing-inmobiliarias.html). ¿Trabajás venta, alquileres o desarrollos?',
+      sugs: ['Venta', 'Alquileres', 'Quiero más consultas']
+    },
+    {
+      id: 'rubro_gimnasio',
+      keys: ['gimnasio', 'gym', 'fitness', 'box', 'crossfit', 'entrenador', 'personal trainer', 'clases'],
+      reply: 'En gimnasios lo que retiene es la comunidad: mostrar gente real entrenando, resultados y un sistema para captar y no perder socios. Te dejo la guía: [Marketing para gimnasios](recurso-marketing-gimnasios.html). ¿Tenés un gym, un box o das clases?',
+      sugs: ['Un gym', 'Doy clases', 'Quiero más socios']
+    },
+    {
+      id: 'rubro_abogados',
+      keys: ['abogado', 'abogados', 'estudio juridico', 'legal', 'derecho', 'estudio de abogados'],
+      reply: 'En el rubro legal la gente contrata a quien percibe como autoridad: contenido que explica simple, presencia profesional y aparecer cuando te buscan. Mirá esto: [Marketing para abogados](recurso-marketing-abogados.html). ¿Tenés un estudio o ejercés de forma independiente?',
+      sugs: ['Tengo un estudio', 'Independiente', 'Quiero clientes']
+    },
+    {
+      id: 'rubro_psicologos',
+      keys: ['psicologo', 'psicologos', 'psicologia', 'terapia', 'terapeuta', 'consultorio psicologico', 'salud mental'],
+      reply: 'En psicología el contenido construye el vínculo antes de la primera sesión: cercanía, claridad y constancia generan las consultas. Te dejo esto: [Marketing para psicólogos](recurso-marketing-psicologos.html). ¿Atendés online, presencial o las dos?',
+      sugs: ['Online', 'Presencial', 'Quiero más consultas']
+    },
+    {
+      id: 'rubro_veterinaria',
+      keys: ['veterinaria', 'veterinario', 'veterinarias', 'mascotas', 'clinica veterinaria', 'pet shop'],
+      reply: 'En veterinarias la confianza se gana mostrando el cuidado real de las mascotas y estando presente en la zona. Mirá: [Marketing para veterinarias](recurso-marketing-veterinarias.html). ¿Tenés una clínica, hacés a domicilio o vendés productos también?',
+      sugs: ['Tengo clínica', 'A domicilio', 'Quiero crecer']
+    },
+    {
+      id: 'rubro_ecommerce',
+      keys: ['marketing para ecommerce', 'marketing ecommerce', 'tengo un ecommerce', 'vendo productos online', 'mas ventas online', 'escalar mi tienda'],
+      reply: 'En e-commerce todo se mide: el contenido atrae, la pauta escala y la web convierte — si una pata falla, se nota en las ventas. Te dejo esto: [Marketing para e-commerce](recurso-marketing-ecommerce.html). ¿Qué vendés y por dónde, web propia o Mercado Libre?',
+      sugs: ['Web propia', 'Mercado Libre', 'Quiero vender más']
+    },
+    {
+      id: 'rubro_arquitectos',
+      keys: ['arquitecto', 'arquitectos', 'arquitectura', 'estudio de arquitectura', 'interiorismo', 'diseño de interiores'],
+      reply: 'En arquitectura tu portfolio es tu mejor vendedor: mostrar obras, proceso y estética con buena producción atrae al cliente que valora el diseño. Mirá: [Marketing para arquitectos](recurso-marketing-arquitectos.html). ¿Hacés obra, interiorismo o ambos?',
+      sugs: ['Obra', 'Interiorismo', 'Quiero más proyectos']
+    },
+    {
+      id: 'rubro_contadores',
+      keys: ['contador', 'contadores', 'estudio contable', 'contabilidad', 'asesor impositivo', 'impuestos'],
+      reply: 'En el rubro contable la gente busca a alguien confiable y claro: contenido que despeja dudas y una presencia profesional generan las consultas. Te dejo esto: [Marketing para contadores](recurso-marketing-contadores.html). ¿Tenés un estudio o atendés de forma independiente?',
+      sugs: ['Tengo un estudio', 'Independiente', 'Quiero clientes']
+    },
+    {
+      id: 'rubro_turismo',
+      keys: ['turismo', 'agencia de viajes', 'viajes', 'hotel', 'hostel', 'alojamiento', 'cabañas', 'excursiones', 'experiencias'],
+      reply: 'En turismo se vende con emoción e imágenes: contenido aspiracional, reservas directas y pauta para llenar temporadas. Mirá: [Marketing de turismo](recurso-marketing-turismo.html). ¿Tenés una agencia, un alojamiento o vendés experiencias?',
+      sugs: ['Agencia', 'Alojamiento', 'Quiero llenar temporada']
     }
   ];
 

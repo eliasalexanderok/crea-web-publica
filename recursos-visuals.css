@@ -40,8 +40,9 @@
   font-size: clamp(28px, 5.2vw, 66px); line-height: 0.94; letter-spacing: -0.025em;
   margin-top: clamp(14px, 1.6vw, 22px); max-width: 18ch; text-wrap: balance;
 }
-.rv-cover__head em { font-style: normal; color: var(--red); }
-.rv-cover__head span { color: var(--navy-light); }
+/* Titular del cover en un solo color (sin rojo/azul) para una lectura sobria */
+.rv-cover__head em { font-style: normal; color: inherit; }
+.rv-cover__head span { color: inherit; }
 .rv-cover__chips { margin-top: clamp(18px, 2.4vw, 30px); display: flex; flex-wrap: wrap; gap: 9px; }
 .rv-cover__chips span {
   font-family: var(--f-mono); font-size: clamp(10px, 0.95vw, 11.5px); letter-spacing: 0.06em;
@@ -149,8 +150,13 @@
 .rv-day__pill--offer { background: var(--red); }
 .rv-day__pill--story { background: transparent; color: var(--text-mid); border: 1px dashed var(--line); font-weight: 500; }
 @media (max-width: 760px) {
-  .rv-week { grid-template-columns: repeat(7, minmax(118px, 1fr)); overflow-x: auto; padding-bottom: 6px;
-    scrollbar-width: thin; }
+  /* La semana se acomoda en varias filas en vez de forzar scroll horizontal */
+  .rv-week { grid-template-columns: repeat(4, 1fr); }
+  .rv-day { min-height: 84px; padding: 11px 8px 10px; }
+}
+@media (max-width: 440px) {
+  .rv-week { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .rv-day__pill { font-size: 11px; padding: 6px 4px; }
 }
 
 /* ── Capas apiladas (branding) ── */

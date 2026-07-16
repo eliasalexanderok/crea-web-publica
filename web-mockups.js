@@ -74,15 +74,48 @@
       var pr = pv.play(); if (pr && pr.catch) pr.catch(function () {});
     }
 
-    // tienda web: el carrito suma productos a medida que cargan
+    // tienda web: demo de compra — el producto "vuela" al carrito y suma
     var cartN = mock.querySelector('.mk-web-cart__n');
+    var cart  = mock.querySelector('.mk-web-cart');
     var cards = mock.querySelectorAll('.mk-pcard');
     if (cartN && cards.length) {
       cartN.textContent = '0';
       if (reduce) { cartN.textContent = String(cards.length); }
       else {
+        var frame = mock.querySelector('.mk-web-frame') || mock;
         cards.forEach(function (c, i) {
-          mock._mkTimers.push(setTimeout(function () { cartN.textContent = String(i + 1); }, 700 + i * 120 + 260));
+          mock._mkTimers.push(setTimeout(function () {
+            // pulso en el producto
+            c.classList.add('adding');
+            setTimeout(function () { c.classList.remove('adding'); }, 500);
+            // punto que vuela del producto al carrito
+            if (cart && frame.getBoundingClientRect) {
+              var fr = frame.getBoundingClientRect();
+              var cr = c.getBoundingClientRect();
+              var tr = cart.getBoundingClientRect();
+              var dot = document.createElement('span');
+              dot.className = 'mk-flydot';
+              dot.style.left = (cr.left - fr.left + cr.width / 2 - 5) + 'px';
+              dot.style.top  = (cr.top  - fr.top  + cr.height / 2 - 5) + 'px';
+              frame.appendChild(dot);
+              requestAnimationFrame(function () {
+                dot.style.transform = 'translate(' +
+                  (tr.left - cr.left + (tr.width - cr.width) / 2) + 'px,' +
+                  (tr.top  - cr.top  + (tr.height - cr.height) / 2) + 'px) scale(0.4)';
+                dot.style.opacity = '0.15';
+              });
+              setTimeout(function () { dot.remove(); }, 620);
+            }
+            // sumar y rebotar el contador
+            setTimeout(function () {
+              cartN.textContent = String(i + 1);
+              if (cart) {
+                cart.classList.remove('bump');
+                void cart.offsetWidth;
+                cart.classList.add('bump');
+              }
+            }, 480);
+          }, 900 + i * 620));
         });
       }
     }

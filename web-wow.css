@@ -233,13 +233,16 @@ body:has(.chat.open) .dock, body:has(.mnav.open) .dock, body:has(.svc.open) .doc
 }
 .dock__btn { font-size: 14px; padding: 12px 20px; flex-shrink: 0; }
 @media (max-width: 720px) {
-  .dock { left: 12px; right: 86px; transform: translate(0, calc(100% + 30px)); gap: 11px; padding-left: 11px; }
+  /* Dock compacto: deja libre el fab del bot (derecha) y no apila tanto texto */
+  .dock { left: 12px; right: 80px; bottom: 14px; transform: translate(0, calc(100% + 30px));
+    gap: 10px; padding: 7px 8px 7px 10px; }
   .dock.show { transform: translate(0, 0); }
   body:has(.chat.open) .dock, body:has(.mnav.open) .dock, body:has(.svc.open) .dock { transform: translate(0, calc(100% + 30px)); }
-  .dock__txt { flex: 1; }
-  .dock__txt b { font-size: 12.5px; white-space: normal; }
-  .dock__txt span { font-size: 8.5px; white-space: normal; }
-  .dock__btn { font-size: 13px; padding: 11px 16px; }
+  .dock__av { width: 36px; height: 36px; }
+  .dock__txt { flex: 1; min-width: 0; }
+  .dock__txt b { font-size: 12px; line-height: 1.15; white-space: normal; }
+  .dock__txt span { display: none; } /* subtítulo rotativo se oculta en mobile para no crecer en alto */
+  .dock__btn { font-size: 12.5px; padding: 9px 14px; }
   .dock__btn .arrow { display: none; }
 }
 

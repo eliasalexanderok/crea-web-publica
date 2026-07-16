@@ -143,7 +143,15 @@
           });
           node.replaceChild(frag, child);
         } else if (child.nodeType === 1 && child.tagName !== 'BR' && !child.classList.contains('mw')) {
-          wrapWords(child);
+          /* .ac usa background-clip:text (relleno con degradado): si le
+             envolvemos el texto en un hijo .mw, el recorte queda vacío y la
+             palabra se vuelve invisible. La tratamos como palabra atómica:
+             le ponemos .mw al propio .ac para que reciba el scrub sin romper. */
+          if (child.classList.contains('ac')) {
+            child.classList.add('mw');
+          } else {
+            wrapWords(child);
+          }
         }
       });
     })(mTitle);

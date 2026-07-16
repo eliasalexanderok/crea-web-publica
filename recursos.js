@@ -1,4 +1,4 @@
-/* CREA · Recursos & Blog — interacciones */
+﻿/* CREA · Recursos & Blog — interacciones */
 (function () {
   'use strict';
   document.body.classList.add('anim');
@@ -185,8 +185,21 @@
     spy();
   }
 
+  /* ── Fix in-page anchor links when <base href="/"> is active ── */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) !== '#') return;
+    e.preventDefault();
+    var id = href.slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
   /* ── AUTORES: enlazar el nombre a su página de perfil ── */
-  var authorPages = { 'Elías Alexander': 'autor-elias-alexander.html', 'Lucas Iván Rodríguez': 'autor-lucas-rodriguez.html' };
+  var authorPages = { 'Elías Alexander': 'autor-elias-alexander.html', 'Lucas Ivan Rodríguez': 'autor-lucas-rodriguez.html' };
   document.querySelectorAll('.authorbox__name, .ahero__who b').forEach(function (el) {
     var name = (el.textContent || '').trim();
     var href = authorPages[name];

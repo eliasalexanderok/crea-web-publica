@@ -264,8 +264,29 @@ Objetivo final de cada conversación: entender a la persona y su negocio con pre
       '\nCliente: ' + userText + '\nAsistente:';
   }
 
+  /* ── Teclado móvil: con visualViewport mantenemos el panel SIEMPRE visible
+     por encima del teclado (sin que se superponga ni se "agrande"). ── */
+  var vv = window.visualViewport;
+  function fitToViewport() {
+    if (!vv || !chat.classList.contains('open')) return;
+    if (window.innerWidth > 520) { /* solo mobile */
+      chat.style.removeProperty('--chat-vh');
+      chat.style.bottom = '';
+      return;
+    }
+    var h = vv.height - 16;                 /* alto visible (sin teclado) */
+    var bottomInset = window.innerHeight - vv.height - vv.offsetTop; /* lo que tapa el teclado */
+    chat.style.setProperty('--chat-vh', h + 'px');
+    chat.style.bottom = (bottomInset + 8) + 'px';
+  }
+  if (vv) {
+    vv.addEventListener('resize', fitToViewport);
+    vv.addEventListener('scroll', fitToViewport);
+  }
+
   function open() {
     chat.classList.add('open');
+    document.body.classList.add('chat-open'); /* oculta el nav flotante en mobile */
     fab.style.display = 'none';
     if (!greeted) {
       greeted = true;
@@ -273,12 +294,19 @@ Objetivo final de cada conversación: entender a la persona y su negocio con pre
         addMsg('bot', '¡Hola! 👋 Soy del equipo de CREA, encantado. Contame, ¿en qué andás con tu marca? ¿Tenés un proyecto en marcha o estás arrancando?');
       }, 250);
     }
-    setTimeout(function () { input.focus(); }, 350);
+    setTimeout(function () { input.focus(); fitToViewport(); }, 350);
   }
-  function close() { chat.classList.remove('open'); fab.style.display = ''; }
+  function close() {
+    chat.classList.remove('open');
+    document.body.classList.remove('chat-open');
+    chat.style.removeProperty('--chat-vh');
+    chat.style.bottom = '';
+    fab.style.display = '';
+  }
 
   fab.addEventListener('click', open);
   closeBtn.addEventListener('click', close);
+  window.creaChatOpen = open; /* usado por el selector Chatear/Jugar (web-game.js) */
 
   async function ask(userText) {
     userText = (userText || '').trim();

@@ -116,7 +116,7 @@ body.anim .stagger > * { transition: opacity var(--dur-md) var(--spring), transf
   display: flex; align-items: center; justify-content: space-between;
   padding: 12px clamp(16px, 3vw, 26px);
   border-radius: 18px;
-  background: rgba(246,244,240,0.55);
+  background: rgba(246,244,240,0.82);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   backdrop-filter: blur(22px) saturate(180%);
   border: 1px solid rgba(255,255,255,0.45);
@@ -125,7 +125,7 @@ body.anim .stagger > * { transition: opacity var(--dur-md) var(--spring), transf
 }
 .nav.scrolled {
   top: 8px;
-  background: rgba(246,244,240,0.72);
+  background: rgba(246,244,240,0.92);
   box-shadow: 0 12px 40px -16px rgba(20,36,88,0.34), inset 0 1px 0 rgba(255,255,255,0.6);
 }
 .nav__logo { height: 28px; width: auto; }
@@ -247,6 +247,10 @@ body.menu-open .nav__logo--dark { display: none !important; }
 .hero__sub { font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: rgba(255,255,255,0.82);
   max-width: 46ch; margin-top: 30px; font-weight: 400; text-wrap: pretty; }
 .hero__sub-2 { font-size: 15px; color: rgba(255,255,255,0.6); margin-top: 10px; font-style: italic; }
+.hero__brand { display: block; }
+.hero__kw { display: block; font-family: var(--f-ui, 'Inter', sans-serif); font-size: clamp(15px, 1.5vw, 19px);
+  line-height: 1.45; letter-spacing: 0; text-transform: none; font-weight: 700; color: #2A5FDB;
+  margin-top: 22px; max-width: 34ch; text-wrap: balance; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 40px; }
 .hero__sec { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500;
   color: rgba(255,255,255,0.85); }
@@ -321,3 +325,13 @@ body.menu-open .nav__logo--dark { display: none !important; }
 /* scroll progress */
 .progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 101;
   background: linear-gradient(90deg, var(--navy), var(--red)); transition: width .1s linear; }
+
+/* ── View Transitions: crossfade suave entre páginas ─────────
+   Solo navegadores que lo soportan (Chrome/Edge/Safari 18+);
+   en el resto no cambia nada. */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation-duration: 0.22s; }
+::view-transition-new(root) { animation-duration: 0.28s; }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
