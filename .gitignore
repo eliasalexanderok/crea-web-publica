@@ -17,3 +17,6 @@ Desktop.ini
 *.opt.mp4
 *.tmp
 *~
+
+# Credenciales temporales de despliegue — nunca van al repositorio
+.deploy-ftp.env
